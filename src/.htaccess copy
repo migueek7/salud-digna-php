@@ -1,0 +1,14 @@
+RewriteEngine On
+Options All -Indexes
+
+#RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Access-Control-Allow-Origin"
+Header always set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+
+#Redireccionar dominio a HTTPS
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

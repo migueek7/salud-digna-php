@@ -1,0 +1,25 @@
+:root {
+    --background-color: #303030;
+    --background-color2: #121212;
+    --color-card: #121212;
+    --color-titulo: #a8a8a8;
+    --color-texto: #a8a8a8;
+    --color-texto-input: #fff;
+    --color-disabled: #2e2e2e;
+    --border-input: #313236;
+    --option-input-select: #0D569569; 
+
+    /* --dark-mode-toggle-light-icon: background-image:url(../images/iconos/light.svg); */
+
+    /* Alert Danger */
+    --alert-danger-color: #db6f6d;
+    --alert-danger-background: #803e445e;
+
+    /* --dark-mode-toggle-active-mode-background-color: red;
+    --dark-mode-toggle-remember-filter:var(--dark-mode-toggle-remember-filter) */
+}
+
+/* body {
+    background-color: rgb(58, 58, 58);
+    background-image:url(../images/iconos/light.svg);
+} */

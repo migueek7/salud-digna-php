@@ -1,0 +1,11 @@
+body {
+    background-image: url('../images/patronfondo1.webp');
+    background-attachment: fixed;
+}
+
+.icon-woman,.icon-man {
+    font-size: 2.4rem;
+}
+.btn-one {
+    max-width: 445px;
+}

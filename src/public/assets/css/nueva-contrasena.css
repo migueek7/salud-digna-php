@@ -1,0 +1,19 @@
+body {
+    background-image: url('../images/patronfondo1.webp');
+    background-attachment: fixed;
+}
+
+.img-icon {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 50%;
+    background: #a3ddcf;
+}
+.swal2-styled {
+	height: 40px;
+	width: 100%;
+	min-width: 300px;
+}
+.swal2-popup {
+	width: 100%;
+	max-width: 560px;
+}

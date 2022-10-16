@@ -1,0 +1,20 @@
+body {
+    background-image: url('../images/patronfondo1.webp');
+    background-attachment: fixed;
+}
+.icon-woman,.icon-man {
+    font-size: 2.4rem;
+}
+
+.form__user::before {
+	content: "\e905";
+}
+.form__pass::before {
+	content: "\e901";
+}
+.btn-one {
+    max-width: 445px;
+}
+.inputFecha-oculto {
+    display: none;
+}

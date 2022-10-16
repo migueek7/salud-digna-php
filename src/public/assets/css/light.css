@@ -1,0 +1,19 @@
+:root {
+    --background-color: #f7f7f7;
+    --background-color2: #fff;
+    --color-card:#FFFFFF;
+    --color-titulo: #616161;
+    --color-texto: #616161;
+    --color-texto-input: #616161;
+    --color-disabled: #E5E5E5;
+    --border-input: var(--border-color);
+    --option-input-select: #D4EBFF; 
+
+     /* Alert Danger */
+     --alert-danger-color: var(--danger-color);
+     --alert-danger-background: #ffe0e3;
+}
+
+/* body {
+    background-color: #f7f7f7;
+} */
