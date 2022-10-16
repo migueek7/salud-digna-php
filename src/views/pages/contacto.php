@@ -13,7 +13,7 @@
     </div>
 
     <section class="contenedor">
-        <h1>¡Queremos ayudarte prueba2!</h1>
+        <h1>¡Queremos ayudarte!</h1>
         <h3 class="mt-0 pb-3">
             Conoce los canales principales en los cuales puedes contactarte con nosotros para resolver tus dudas.
         </h3>
