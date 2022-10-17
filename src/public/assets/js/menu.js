@@ -104,67 +104,36 @@
         /* -------------------------------------------------------------------------- */
 
         let menuInside = document.querySelectorAll('.megamenu .menu__nesting .menu__inside > .menu__link');
-        console.log(menuInside);
 
         menuInside.forEach(element => {
 
             let submenu = element.parentElement.parentElement.parentElement.children[1];
-            console.log("submenu", element.parentElement.parentElement.parentElement);
-
             let Altura = element.parentElement.parentElement.clientHeight;
             let Ancho = element.parentElement.parentElement.clientWidth;
-            console.log("Altura", Altura);
-
 
             // ocultarTodos();
             element.addEventListener('mouseover', function (e) {
 
                 let attrSubmenu = submenu.children[0].children;
-
-
                 Array.from(attrSubmenu).forEach(submega => {
-                    console.log(submega);
                     submega.classList.add('d-none');
                 });
 
                 let item = attrSubmenu.namedItem(element.id);
-                console.log("item", item);
-
                 submenu.classList.add("active");
-                // submenu.innerHTML = element.textContent;
-                // console.log('hiciste hover', element.parentElement.parentElement.clientHeight);
                 submenu.style.marginLeft += Ancho + 'px';
-
                 submenu.style.minHeight += Altura + 'px';
-                // console.log("id", element.id);
-                // console.log("atributo", item.getAttribute('name'));
 
                 if (item != null) {
                     if (element.id == item.getAttribute('name')) {
-                        console.log("son iguales");
                         item.classList.remove('d-none');
                     } else {
-                        // console.log("son diferentes");
                         item.classList.add('d-none');
                     }
                 }
 
             });
-
-            // element.addEventListener('mouseout', function (e) {
-            //     let attrSubmenu = submenu.children[0].children;
-            //     let item = attrSubmenu.namedItem(element.id);
-
-            //     console.log("item", item);
-            //     if (item != null) {
-            //         if (item !== 'submenu') {
-            //             item.classList.add('d-none');
-            //         }
-            //     }
-            // });
         });
-
-        /*******************************************************************/
 
         /* -------------------------------------------------------------------------- */
         /*                         AUTO INICIAR SUBEMNU COVID                         */
@@ -179,7 +148,6 @@
                 let submenu = e.target.parentElement.children[1].children[0].children[1];
                 if (submenu) {
                     submenu.classList.add('active');
-                    console.log('submenu', submenu);
                     submenu.children[0].querySelectorAll("[name=pcrCovid]")[0].classList.remove('d-none');
                     this.removeEventListener('mouseover', activarSubmenuCovid);
                 }
@@ -197,7 +165,6 @@
                 let submenu = e.target.parentElement.children[1].children[0].children[1];
                 if (submenu) {
                     submenu.classList.add('active');
-                    console.log('submenu', submenu);
                     submenu.children[0].querySelectorAll("[name=Laboratorio]")[0].classList.remove('d-none');
                     this.removeEventListener('mouseover', activarSubmenuServicios);
                 }
