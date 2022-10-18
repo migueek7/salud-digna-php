@@ -207,7 +207,7 @@
                                         <span class="icon-pcr-en-tiempo-real"></span>
                                     </div>
                                 </div>
-                                <div id="category_1" class="accion"></div>
+                                <div id="category_1" class="accion" category="PCREnTiempoRealInf"></div>
                             </div>
                         </div>
 
@@ -218,7 +218,7 @@
                                         <span class="icon-prueba-antigenos"></span>
                                     </div>
                                 </div>
-                                <div id="category_2" class="accion"></div>                            
+                                <div id="category_2" class="accion" category="PruebaDeAntigenosInf"></div>                            
                             </div>
                         </div>
 
@@ -229,7 +229,7 @@
                                         <span class="icon-prueba-anticuerpos"></span>
                                     </div>
                                 </div>
-                                <div id="category_3" class="accion"></div>                               
+                                <div id="category_3" class="accion" category="AnticuerposTotalesInf"></div>                               
                             </div>
                         </div>
 
@@ -241,7 +241,7 @@
                                         <h4 class="title">Pagos en línea</h4>
                                     </div>
                                 </div>
-                                <div id="category_4" class="accion"></div>
+                                <div id="category_4" class="accion" category="PagosEnLineaInf"></div>
                             </div>
                         </div>
 
@@ -253,7 +253,7 @@
                                         <h4 class="title">Resultados</h4>
                                     </div>
                                 </div>
-                                <div id="category_5" class="accion"></div>
+                                <div id="category_5" class="accion" category="ResultadosInf"></div>
                             </div>
                         </div>
 
@@ -265,7 +265,7 @@
                                         <h4 class="title">Laboratorio</h4>
                                     </div>
                                 </div>
-                                <div id="category_6" class="accion"></div>                                
+                                <div id="category_6" class="accion" category="LaboratorioInf"></div>                                
                             </div>
                         </div>
 
@@ -277,7 +277,7 @@
                                         <h4 class="title">Lentes</h4>
                                     </div>
                                 </div>
-                                <div id="category_7" class="accion"></div>                              
+                                <div id="category_7" class="accion" category="LentesInf"></div>                              
                             </div>
                         </div>
 

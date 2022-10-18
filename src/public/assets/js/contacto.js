@@ -23,73 +23,40 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     function cambiarInfoCategoria() {
-        let cuadros = document.querySelectorAll(".item");
 
-        cuadros.forEach(element => {
-            element.addEventListener("click", function (e) {
+        let Categories = document.getElementById('categorias').children;
+        let Items = document.querySelectorAll(".item");
+        Categories = Array.prototype.slice.call(Categories);
+
+        Items.forEach(item => {
+            item.addEventListener("click", function (e) {
+
                 console.log("diste click");
+                desactivarItems(Items);
+                item.classList.toggle("active");
 
-                removerClases(cuadros);
-
-                element.classList.toggle("active");
-
-                console.log(e.target.id);
-
-                if (e.target.id == "category_1") {
-                    document.getElementById("PCREnTiempoRealInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("PCREnTiempoRealInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_2") {
-                    document.getElementById("PruebaDeAntigenosInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("PruebaDeAntigenosInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_3") {
-                    document.getElementById("AnticuerposTotalesInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("AnticuerposTotalesInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_4") {
-                    document.getElementById("PagosEnLineaInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("PagosEnLineaInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_5") {
-                    document.getElementById("ResultadosInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("ResultadosInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_6") {
-                    document.getElementById("LaboratorioInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("LaboratorioInf").classList.add("d-none");
-                }
-
-                if (e.target.id == "category_7") {
-                    document.getElementById("LentesInf").classList.remove("d-none");
-                } else {
-                    document.getElementById("LentesInf").classList.add("d-none");
-                }
+                Categories.forEach((category) => {
+                    if (e.target.getAttribute('category') == category.id) {
+                        // console.log("son iguales");
+                        document.getElementById(category.id).classList.remove("d-none");
+                    } else {
+                        // console.log("son diferentes");
+                        document.getElementById(category.id).classList.add("d-none");
+                    }
+                });
             });
         });
     }
     cambiarInfoCategoria();
 
 
-    function removerClases(cuadros) {
-        cuadros.forEach(element => {
+    function desactivarItems(Items) {
+        Items.forEach(element => {
             element.classList.remove("active");
         });
     }
     function removerContenedores(contenedores) {
         contenedores.forEach(element => {
-            // console.log(element);
             element.classList.add("d-none");
         });
     }
@@ -100,14 +67,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let identificadorDeTemporizador;
 
     inputBuscar.addEventListener('keyup', function (e) {
-        //console.log(e.target);
 
-        // document.getElementById(".load").classList.remove("d-none");
         document.querySelector(".nofound").classList.add("d-none");
 
         let buscarTexto;
         let string = e.target.value;
-        // console.log(string.length);
+
         if (string.length > 0) {
             borrarAlerta();
 
@@ -117,95 +82,73 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             buscarTexto = e.target.value.trim().toLowerCase();
 
-            if (buscarTexto == "prueba diagnostica pcr en tiempo real" ||
-                buscarTexto == "prueba" ||
-                buscarTexto == "diagnostica" ||
-                buscarTexto == "pcr" ||
-                buscarTexto == "tiempo" ||
-                buscarTexto == "real" ||
-                buscarTexto == "tiempo real") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_1").parentElement.classList.add("active");
-                document.getElementById("PCREnTiempoRealInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(0, false, false);
+            const arrayBuscar = [
+                {
+                    id: 0,
+                    value: "prueba diagnostica pcr en tiempo real",
+                    name_category: "PCREnTiempoRealInf"
+                },
+                {
+                    id: 1,
+                    value: "prueba de antigenos covid 19",
+                    name_category: "PruebaDeAntigenosInf"
+                },
+                {
+                    id: 2,
+                    value: "nuevo estudio anticuerpos totales cuantitativos",
+                    name_category: "AnticuerposTotalesInf"
+                },
+                {
+                    id: 3,
+                    value: "pagos en linea",
+                    name_category: "PagosEnLineaInf"
+                },
+                {
+                    id: 4,
+                    value: "resultados",
+                    name_category: "ResultadosInf"
+                },
+                {
+                    id: 5,
+                    value: "laboratorio",
+                    name_category: "LaboratorioInf"
+                },
+                {
+                    id: 6,
+                    value: "lentes",
+                    name_category: "LentesInf"
+                }
+            ];
+
+            for (let buscar of arrayBuscar) {
+
+                let arrayDeCadenas = buscar.value.toLowerCase();
+                if (arrayDeCadenas.includes(buscarTexto)) {
+                    if (buscarTexto.length > 0) {
+
+                        let id_category = Number(buscar.id + 1);
+                        document.getElementById("load").classList.add("d-none");
+                        desactivarItems(cuadros);
+                        removerContenedores(contenedores);
+                        document.getElementById("category_" + id_category).parentElement.classList.add("active");
+                        document.getElementById(buscar.name_category).classList.remove("d-none");
+                        document.getElementById("nofound").classList.add("d-none");
+                        let postion = id_category - 1;
+                        swiper2.slideTo(postion, false, false);
+                        borrarAlerta();
+                        return;
+                    }
+
+                } else {
+                    borrarAlerta();
+                    temporizadorDeRetraso();
+                }
             }
-            else if (buscarTexto == "prueba de antigenos covid 19" ||
-                buscarTexto == "prueba de antigenos" ||
-                buscarTexto == "antigenos" ||
-                buscarTexto == "covid" ||
-                buscarTexto == "covid 19") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_2").parentElement.classList.add("active");
-                document.getElementById("PruebaDeAntigenosInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(1, false, false);
-            }
-            else if (buscarTexto == "nuevo estudio anticuerpos totales cuantitativos" ||
-                buscarTexto == "nuevo estudio" ||
-                buscarTexto == "estudio anticuerpos" ||
-                buscarTexto == "estudio" ||
-                buscarTexto == "anticuerpos" ||
-                buscarTexto == "totales" ||
-                buscarTexto == "cuantitativos") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_3").parentElement.classList.add("active");
-                document.getElementById("AnticuerposTotalesInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(2, false, false);
-            }
-            else if (buscarTexto == "pagos en linea" ||
-                buscarTexto == "pagos" ||
-                buscarTexto == "pago" ||
-                buscarTexto == "en linea" ||
-                buscarTexto == "linea") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_4").parentElement.classList.add("active");
-                document.getElementById("PagosEnLineaInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(3, false, false);
-            }
-            else if (buscarTexto == "resultados") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_5").parentElement.classList.add("active");
-                document.getElementById("ResultadosInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(4, false, false);
-            }
-            else if (buscarTexto == "laboratorio" || buscarTexto == "estudios de Laboratorio") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_6").parentElement.classList.add("active");
-                document.getElementById("LaboratorioInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(5, false, false);
-            }
-            else if (buscarTexto == "lentes" || buscarTexto == "lente" || buscarTexto == "gafas") {
-                document.getElementById("load").classList.add("d-none");
-                removerClases(cuadros);
-                removerContenedores(contenedores)
-                document.getElementById("category_7").parentElement.classList.add("active");
-                document.getElementById("LentesInf").classList.remove("d-none");
-                document.getElementById("nofound").classList.add("d-none");
-                swiper2.slideTo(6, false, false);
-            }
-            else {
-                temporizadorDeRetraso();
-            }
-        } else {
+        }
+        else {
             document.getElementById("load").classList.add("d-none");
             document.getElementById("nofound").classList.add("d-none");
+            document.getElementById('info-contacto').classList.remove("d-none");
             borrarAlerta();
             return;
         }
@@ -218,13 +161,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     function funcionConRetraso() {
         document.getElementById("load").classList.add("d-none");
         document.getElementById("nofound").classList.remove("d-none");
+        borrarAlerta();
     }
 
     function borrarAlerta() {
         clearTimeout(identificadorDeTemporizador);
     }
-
-
 
 
     if (document.getElementById("estado_clinica_cita_modal")) {
@@ -272,13 +214,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
                 try {
                     const respuesta = await fetch("https://api.emarketingsd.org/base/Estados/Listado?IdPais=1", requestOptions);
-                    // console.log(respuesta);
-
                     if (!respuesta.ok) throw respuesta; // Capturar errores
 
                     if (respuesta.status === 200) {
-                        let estadosHTML = document.querySelectorAll("#estado_clinica_cita_modal option");
-                        // console.log(estadosHTML);
 
                         const getMunicipioPorID = async () => {
 
