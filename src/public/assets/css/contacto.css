@@ -1,7 +1,6 @@
 body {
     color: #707070;
     font-size: 1.6rem !important;
-    font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -145,6 +144,7 @@ h3 {
     left: 0;
     right: 0;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 .item .icono .title {
