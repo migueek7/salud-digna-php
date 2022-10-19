@@ -5,7 +5,7 @@ import {
 
 window.addEventListener('DOMContentLoaded', (event) => {
 
-    console.log(prueba);
+    //console.log(prueba);
 
     var swiper2 = new Swiper("#swiper2", {
         // pagination: '.swiper-pagination',
