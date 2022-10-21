@@ -22,6 +22,93 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
 
+    const arrayBuscar = [
+        
+        {
+            id: "category_4",
+            value: "pagos en linea",
+            category: "PagosEnLineaInf",
+            icon: "icon-pagos-en-linea",
+            title: "Pagos en línea",
+            position: 1
+        },
+        {
+            id: "category_5",
+            value: "resultados",
+            category: "ResultadosInf",
+            icon: "icon-resultados",
+            title: "Resultados",
+            position: 2
+        },
+        {
+            id: "category_6",
+            value: "laboratorio",
+            category: "LaboratorioInf",
+            icon: "icon-laboratorio",
+            title: "Laboratorio",
+            position: 3
+        },
+        {
+            id: "category_7",
+            value: "lentes",
+            category: "LentesInf",
+            icon: "icon-lentes",
+            title: "Lentes",
+            position: 4
+        },
+        {
+            id: "category_1",
+            value: "prueba diagnostica pcr en tiempo real",
+            category: "PCREnTiempoRealInf",
+            icon: "icon-pcr-en-tiempo-real",
+            title: "",
+            position: 4
+        },
+        {
+            id: "category_2",
+            value: "prueba de antigenos covid 19",
+            category: "PruebaDeAntigenosInf",
+            icon: "icon-prueba-antigenos",
+            title: "",
+            position: 5
+        },
+        {
+            id: "category_3",
+            value: "nuevo estudio anticuerpos totales cuantitativos",
+            category: "AnticuerposTotalesInf",
+            icon: "icon-prueba-anticuerpos",
+            title: "",
+            position: 7
+        }
+    ];
+
+    
+    const cardItemContent = document.getElementById('cardItemContent');
+    let active = "active";
+    let template = ``;
+
+    arrayBuscar.map(function(data, index){
+        active = index == 0 ? "active" : null;
+        if (active == "active") {
+            document.getElementById(data.category).classList.remove('d-none');
+        }
+        template += `
+            <div class="swiper-slide">
+                <div class="item card ${data.id} ${active}">
+                    <div class="icono">
+                        <div>
+                            <span class="${data.icon}"></span>
+                            <h4 class="title">${data.title}</h4>
+                        </div>
+                    </div>
+                    <div id="${data.id}" class="accion" category="${data.category}"></div>                               
+                </div>
+            </div>
+        `;
+    });
+    cardItemContent.innerHTML = template;
+
+
     function cambiarInfoCategoria() {
 
         let Categories = document.getElementById('categorias').children;
@@ -69,8 +156,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     inputBuscar.addEventListener('keyup', function (e) {
 
         document.querySelector(".nofound").classList.add("d-none");
-
-        let buscarTexto;
         let string = e.target.value;
 
         if (string.length > 0) {
@@ -79,71 +164,30 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("nofound").classList.add("d-none");
             document.getElementById("load").classList.remove("d-none");
             document.getElementById("info-contacto").classList.add("d-none");
+            let buscarTexto = e.target.value.trim().toLowerCase();
 
-            buscarTexto = e.target.value.trim().toLowerCase();
-
-            const arrayBuscar = [
-                {
-                    id: 0,
-                    value: "prueba diagnostica pcr en tiempo real",
-                    name_category: "PCREnTiempoRealInf"
-                },
-                {
-                    id: 1,
-                    value: "prueba de antigenos covid 19",
-                    name_category: "PruebaDeAntigenosInf"
-                },
-                {
-                    id: 2,
-                    value: "nuevo estudio anticuerpos totales cuantitativos",
-                    name_category: "AnticuerposTotalesInf"
-                },
-                {
-                    id: 3,
-                    value: "pagos en linea",
-                    name_category: "PagosEnLineaInf"
-                },
-                {
-                    id: 4,
-                    value: "resultados",
-                    name_category: "ResultadosInf"
-                },
-                {
-                    id: 5,
-                    value: "laboratorio",
-                    name_category: "LaboratorioInf"
-                },
-                {
-                    id: 6,
-                    value: "lentes",
-                    name_category: "LentesInf"
-                }
-            ];
-
-            for (let buscar of arrayBuscar) {
-
+            arrayBuscar.forEach((buscar, index) => {
+                
                 let arrayDeCadenas = buscar.value.toLowerCase();
                 if (arrayDeCadenas.includes(buscarTexto)) {
                     if (buscarTexto.length > 0) {
-
-                        let id_category = Number(buscar.id + 1);
+    
                         document.getElementById("load").classList.add("d-none");
                         desactivarItems(cuadros);
                         removerContenedores(contenedores);
-                        document.getElementById("category_" + id_category).parentElement.classList.add("active");
-                        document.getElementById(buscar.name_category).classList.remove("d-none");
+                        document.getElementById(buscar.id).parentElement.classList.add("active");
+                        document.getElementById(buscar.category).classList.remove("d-none");
                         document.getElementById("nofound").classList.add("d-none");
-                        let postion = id_category - 1;
-                        swiper2.slideTo(postion, false, false);
+                        swiper2.slideTo(index, false, false);
                         borrarAlerta();
                         return;
                     }
-
+    
                 } else {
                     borrarAlerta();
                     temporizadorDeRetraso();
                 }
-            }
+            });
         }
         else {
             document.getElementById("load").classList.add("d-none");

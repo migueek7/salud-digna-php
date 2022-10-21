@@ -197,93 +197,9 @@
                 <div id="swiper2" class="swiper-container"> 
 
                     <!-- additional required wrapper -->
-                    <div class="swiper-wrapper">
-
-                        <!-- slides -->
-                        <div class="swiper-slide">
-                            <div class="item card category_1 active">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-pcr-en-tiempo-real"></span>
-                                    </div>
-                                </div>
-                                <div id="category_1" class="accion" category="PCREnTiempoRealInf"></div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="item card category_2">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-prueba-antigenos"></span>
-                                    </div>
-                                </div>
-                                <div id="category_2" class="accion" category="PruebaDeAntigenosInf"></div>                            
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="item card category_3">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-prueba-anticuerpos"></span>
-                                    </div>
-                                </div>
-                                <div id="category_3" class="accion" category="AnticuerposTotalesInf"></div>                               
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide ">
-                            <div class="item card category_4">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-pagos-en-linea"></span>
-                                        <h4 class="title">Pagos en línea</h4>
-                                    </div>
-                                </div>
-                                <div id="category_4" class="accion" category="PagosEnLineaInf"></div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="item card category_5">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-resultados"></span>
-                                        <h4 class="title">Resultados</h4>
-                                    </div>
-                                </div>
-                                <div id="category_5" class="accion" category="ResultadosInf"></div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide ">
-                            <div class="item card category_6">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-laboratorio"></span>
-                                        <h4 class="title">Laboratorio</h4>
-                                    </div>
-                                </div>
-                                <div id="category_6" class="accion" category="LaboratorioInf"></div>                                
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide ">
-                            <div class="item card category_7">
-                                <div class="icono">
-                                    <div>
-                                        <span class="icon-lentes"></span>
-                                        <h4 class="title">Lentes</h4>
-                                    </div>
-                                </div>
-                                <div id="category_7" class="accion" category="LentesInf"></div>                              
-                            </div>
-                        </div>
+                    <div class="swiper-wrapper" id="cardItemContent">
 
                     </div>
-
-                  
 
                 </div>
 
@@ -297,7 +213,7 @@
 
         <div id="categorias" class="categorias">
 
-            <div id="PCREnTiempoRealInf" class="contenedor">
+            <div id="PCREnTiempoRealInf" class="contenedor d-none">
                 <div class="categorias__card">
 
                     <div class="categorias__header">
