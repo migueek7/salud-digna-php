@@ -1,5 +1,34 @@
 <?=$this->layout('layouts/layout');?>
 
+<style>
+    .h2, h2 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .h3, h3 {
+        font-size: 18px;
+        line-height: normal;
+    }
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+        ol, ul {
+            font-size: 14px;
+        }
+        .h2, h2 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .h3, h3 {
+            font-size: 15px;
+            font-weight: bold;
+            
+        }
+    }
+</style>
+<h1 style="position: absolute;left: -120%;">Contáctanos</h1>
+
 <section>
 
     <div class="banner">
@@ -13,7 +42,7 @@
     </div>
 
     <section class="contenedor">
-        <h1>¡Queremos ayudarte!</h1>
+        <h2 class="titulo">¡Queremos ayudarte!</h2>
         <h3 class="mt-0 pb-3">
             Conoce los canales principales en los cuales puedes contactarte con nosotros para resolver tus dudas.
         </h3>

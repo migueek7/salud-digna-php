@@ -1,16 +1,10 @@
+.h2, h2 {
+    font-size: initial;
+}
+
 body {
     color: #707070;
     font-size: 1.6rem !important;
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 17px;
-    font-weight: bold;
 }
 
 .caja-info-alto {
@@ -561,6 +555,18 @@ h3 {
 }
 
 @media (max-width: 768px) {
+
+    p, span, strong {
+        font-size: 14px;
+    }
+    .buscando h4 {
+        font-size: 18px;
+    }
+
+    #nofound h4 {
+        margin: 10px 0px 10px 0px;
+        line-height: normal;
+    }
 
     #load img {
         width: 100%;
