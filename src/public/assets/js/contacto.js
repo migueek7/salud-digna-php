@@ -28,56 +28,49 @@ window.addEventListener('DOMContentLoaded', (event) => {
             value: "pagos en linea",
             category: "PagosEnLineaInf",
             icon: "icon-pagos-en-linea",
-            title: "Pagos en línea",
-            position: 1
+            title: "Pagos en línea"
         },
         {
             id: "category_5",
             value: "resultados",
             category: "ResultadosInf",
             icon: "icon-resultados",
-            title: "Resultados",
-            position: 2
+            title: "Resultados"
         },
         {
             id: "category_6",
             value: "laboratorio",
             category: "LaboratorioInf",
             icon: "icon-laboratorio",
-            title: "Laboratorio",
-            position: 3
+            title: "Laboratorio"
         },
         {
             id: "category_7",
             value: "lentes",
             category: "LentesInf",
             icon: "icon-lentes",
-            title: "Lentes",
-            position: 4
+            title: "Lentes"
         },
         {
             id: "category_1",
             value: "prueba diagnostica pcr en tiempo real",
             category: "PCREnTiempoRealInf",
             icon: "icon-pcr-en-tiempo-real",
-            title: "",
-            position: 4
+            title: ""
         },
         {
             id: "category_2",
             value: "prueba de antigenos covid 19",
             category: "PruebaDeAntigenosInf",
             icon: "icon-prueba-antigenos",
-            title: "",
-            position: 5
+            title: ""
         },
         {
             id: "category_3",
             value: "nuevo estudio anticuerpos totales cuantitativos",
             category: "AnticuerposTotalesInf",
             icon: "icon-prueba-anticuerpos",
-            title: "",
-            position: 7
+            title: ""
         }
     ];
 
@@ -178,7 +171,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     inputBuscar.addEventListener('keyup', function (e) {
 
-    
         document.querySelector(".nofound").classList.add("d-none");
         let string = e.target.value;
 
@@ -190,24 +182,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("info-contacto").classList.add("d-none");
             let buscarTexto = e.target.value.trim().toLowerCase();
 
-            //arrayBuscar.forEach((buscar, index) => {
             let i = 0;
             for (let buscar of arrayBuscar) {
                 let arrayDeCadenas = buscar.value.toLowerCase();
                 
-                if (arrayDeCadenas.includes(buscarTexto)) {
-                    if (buscarTexto.length > 0) {
-    
-                        document.getElementById("load").classList.add("d-none");
-                        desactivarItems(cuadros);
-                        removerContenedores(contenedores);
-                        document.getElementById(buscar.id).parentElement.classList.add("active");
-                        document.getElementById(buscar.category).classList.remove("d-none");
-                        document.getElementById("nofound").classList.add("d-none");
-                        swiper2.slideTo(i, false, false);
-                        borrarAlerta();
-                        break;
-                    }
+                if (arrayDeCadenas.includes(buscarTexto) && buscarTexto.length > 2) {
+                    
+                    document.getElementById("load").classList.add("d-none");
+                    desactivarItems(cuadros);
+                    removerContenedores(contenedores);
+                    document.getElementById(buscar.id).parentElement.classList.add("active");
+                    document.getElementById(buscar.category).classList.remove("d-none");
+                    document.getElementById("nofound").classList.add("d-none");
+                    swiper2.slideTo(i, false, false);
+                    borrarAlerta();
+                    break;
+                    
                 } else {
                     borrarAlerta();
                     temporizadorDeRetraso();
@@ -219,7 +209,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("load").classList.add("d-none");
             document.getElementById("nofound").classList.add("d-none");
             document.getElementById('info-contacto').classList.remove("d-none");
-            // borrarAlerta();
+            borrarAlerta();
             return;
         }
     });
