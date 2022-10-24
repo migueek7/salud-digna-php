@@ -109,23 +109,18 @@ body {
 .item .icono span {
     font-size: 6rem;
 }
-
 .item .icono .icon-lentes {
     font-size: 4rem;
 }
-
 .item .icono .icon-pagos-en-linea {
     font-size: 7rem;
 }
-
 .item .icono .icon-pcr-en-tiempo-real {
     font-size: 7rem;
 }
-
 .item .icono .icon-prueba-antigenos {
     font-size: 5rem;
 }
-
 .item .icono .icon-laboratorio {
     font-size: 5rem;
 }
@@ -591,11 +586,32 @@ body {
     }
 
 
-    .item .icono .icon-pcr-en-tiempo-real {
+    .item .icono {
+        height: 150px;
+    }
+    .item .icono span {
+        font-size: 5rem;
+    }
+    .item .icono .icon-lentes {
+        font-size: 3rem;
+    }
+    .item .icono .icon-pagos-en-linea {
         font-size: 6rem;
     }
-
+    .item .icono .icon-pcr-en-tiempo-real {
+        font-size: 5rem;
+    }
     .item .icono .icon-prueba-antigenos {
         font-size: 4rem;
     }
+    .item .icono .icon-laboratorio {
+        font-size: 4rem;
+    }
+    
 }
+
+@media (max-width: 575.98px) {
+
+    
+}
+

@@ -187,7 +187,7 @@
             <hr class="hr">
 
 
-            <div class="grid-2 grid-2__contacto pt-3">
+            <div class="grid-2 grid-2__contacto pt-3 pb-3">
 
                 <div class="columna align-items-center h-100">
                     <div class="w-100">
@@ -214,11 +214,9 @@
 
     <section class="servicios">
 
-        <div class="contenedor">
-            <h3 class="pb-0 mb-0">Selecciona la categoría de tu interés</h3>
-        </div>
-
         <div class="contenedor">    
+
+            <h3 class="pb-3 mb-0 mt-0">Selecciona la categoría de tu interés</h3>
 
             <div class="lunchbox">
 

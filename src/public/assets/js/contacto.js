@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     const arrayBuscar = [
-        
         {
             id: "category_4",
             value: "pagos en linea",
@@ -109,6 +108,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     cardItemContent.innerHTML = template;
 
 
+
+
+    document.getElementById('buscar').addEventListener('click', () => scrollTopElement('buscar'));
+    document.getElementById('buscar').addEventListener('keyup', () => scrollTopElement('buscar'));
+    function scrollTopElement(IDelement) {
+        setTimeout(function() {
+            window.scrollTo({
+                'behavior': 'smooth',
+                'left': 0,
+                'top': document.getElementById(IDelement).offsetTop - 80
+            });
+        }, 800);
+    }
+
+
     function cambiarInfoCategoria() {
 
         let Categories = document.getElementById('categorias').children;
@@ -119,6 +133,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
             item.addEventListener("click", function (e) {
 
                 console.log("diste click");
+                
+                window.scrollTo({
+                    'behavior': 'smooth',
+                    'left': 0,
+                    'top': document.querySelector('.servicios').offsetTop - 80
+                });
+
                 desactivarItems(Items);
                 item.classList.toggle("active");
 
@@ -135,6 +156,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
     }
     cambiarInfoCategoria();
+
+
 
 
     function desactivarItems(Items) {
@@ -155,6 +178,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     inputBuscar.addEventListener('keyup', function (e) {
 
+    
         document.querySelector(".nofound").classList.add("d-none");
         let string = e.target.value;
 
@@ -166,9 +190,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("info-contacto").classList.add("d-none");
             let buscarTexto = e.target.value.trim().toLowerCase();
 
-            arrayBuscar.forEach((buscar, index) => {
-                
+            //arrayBuscar.forEach((buscar, index) => {
+            let i = 0;
+            for (let buscar of arrayBuscar) {
                 let arrayDeCadenas = buscar.value.toLowerCase();
+                
                 if (arrayDeCadenas.includes(buscarTexto)) {
                     if (buscarTexto.length > 0) {
     
@@ -178,22 +204,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
                         document.getElementById(buscar.id).parentElement.classList.add("active");
                         document.getElementById(buscar.category).classList.remove("d-none");
                         document.getElementById("nofound").classList.add("d-none");
-                        swiper2.slideTo(index, false, false);
+                        swiper2.slideTo(i, false, false);
                         borrarAlerta();
-                        return;
+                        break;
                     }
-    
                 } else {
                     borrarAlerta();
                     temporizadorDeRetraso();
                 }
-            });
+                i++;
+            }
         }
         else {
             document.getElementById("load").classList.add("d-none");
             document.getElementById("nofound").classList.add("d-none");
             document.getElementById('info-contacto').classList.remove("d-none");
-            borrarAlerta();
+            // borrarAlerta();
             return;
         }
     });
