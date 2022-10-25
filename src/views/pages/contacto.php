@@ -184,29 +184,27 @@
             </div>
 
 
-            <hr class="hr">
+            
+            <div class="pt-3">
 
-
-            <div class="grid-2 grid-2__contacto pt-3 pb-3">
-
-                <div class="columna align-items-center h-100">
-                    <div class="w-100">
-                        <h3>Realiza una consulta por nuestros medios digitales,<br> ¡Es muy sencillo! </h3>
-                        <p>
-                            Te compartimos el siguiente tutorial, para que identifiques de manera sencilla cómo puedes consultar tus resultados, cotizar estudios, agendar una cita, información sobre pruebas de la covid-19, horario, teléfono y ubicación de mi clínica.
-                        </p>
+                <h3 class="pb-3 mb-0 mt-0">Selecciona la categoría de tu interés</h3>
+    
+                <div class="grid-2 pb-3">
+    
+                    <div class="columna pb-2">
+                        <img src="<?=images()?>/contacto/consulta1.png" width="367" class="imagen" alt="">
                     </div>
-                </div>
-
-                <div class="columna">
-                    <div class="w-100">
-                        <div class="video-responsive">
-                            <!-- <iframe loading="lazy" src="https://www.youtube.com/embed/6PES4AJgnRQ" title="Salud Digna" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                            <video src="https://salud-digna.com/citasCovid19/SD-Video-Covid19-032020.mp4" controls="" style="width: 100%;outline: none;"></video>
-                        </div>
+    
+                    <div class="columna pb-2">
+                        <img src="<?=images()?>/contacto/consulta2.png" width="375" class="imagen" alt="">
+                    </div>
+    
+                    <div class="columna pb-2">
+                        <img src="<?=images()?>/contacto/consulta3.png" width="378" class="imagen" alt="">
                     </div>
                 </div>
             </div>
+
 
         </div>
     </section>
