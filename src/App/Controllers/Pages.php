@@ -17,6 +17,7 @@ class Pages extends Controller
     {
         $estilos = [
             css().'plugins/swiper-bundle.min',
+            css().'global',
             css().'home.min'
         ];
 

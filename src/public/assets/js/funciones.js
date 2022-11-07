@@ -15,7 +15,7 @@ document.getElementById('fondo-oscuro').addEventListener('click', function(){
 
 
 const menu_links = document.querySelector('.menu__links');
-const menu_item_show = document.querySelectorAll('.menu__item-show');
+// const menu_item_show = document.querySelectorAll('.menu__item-show');
 const menu_accion = document.querySelector('.menu__accion');
 const hamburger = document.querySelector('.hamburger');
 const fondo_oscuro = document.getElementById('fondo-oscuro');

@@ -1,240 +1,424 @@
 <?php
 $imgExt = ".webp"; 
-$menu = [
-    "covid" => [
-        0 => [
-            "id" => "pcrCovid",
-            "titulo" => "Agendar Prueba PCR COVID-19",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/covid/pcr".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Prueba Diagnostica PCR En Tiempo Real",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/pcr-web".$imgExt
+$navMain = [
+    [
+        "id" => "Conocenos", 
+        "titulo" => "Conócenos",
+        "megamenu" => false,
+        "items" => [
+            [
+                "titulo" => "¿Quiénes somos?",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Historia",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Centro Nacional de Referencia",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Misión, visión y valores",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Bolsa de Trabajo",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Contáctanos",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
             ]
         ],
-        1 => [
-            "id" => "prueAntigeno",
-            "titulo" => "Agendar Prueba Antígenos COVID",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/covid/antigenos".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Prueba Antígenos",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/antigenos-web".$imgExt
-            ]
-        ],
-        2 => [
-            "id" => "diferPruebas",
-            "titulo" => "Diferencia entre pruebas",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/covid/diferencias".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Diferencia entre pruebas",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/diferencias-web".$imgExt
-            ]
-        ],
-        3 => [
-            "id" => "infDeLaEnfermedad",
-            "titulo" => "Información de la enfermedad",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/covid/ubica".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/ubica-web".$imgExt
-            ]
-        ],
-        4 => [
-            "id" => "estaEnTiempoReal",
-            "titulo" => "Estadísticas en tiempo real",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/covid/estadisticas".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Estadísticas en tiempo real",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/estadisticas-web".$imgExt
-            ]
-        ],
-        5 => [
-            "id" => "tomaMuestra",
-            "titulo" => "Ubica tu toma de muestra",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/covid/ubica".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Ubica la toma de muestra más cercana para las pruebas de COVID-19.",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/covid/ubica-web".$imgExt
+    ],
+    [
+        "id" => "Servicios", 
+        "titulo" => "Servicios",
+        "megamenu" => true,
+        "items" => [
+            [
+                "id" => "Laboratorio",
+                "titulo" => "Laboratorio",
+                "extracto" => "
+                    Contamos con más de 1000 pruebas, de las cuales, la mayoría se procesan en cada uno de nuestros laboratorios.
+                ",
+                "imagen" => images()."/menu/servicios/laboratorio".$imgExt,
+                "submenu" => [
+                    "titulo" => "Laboratorio",
+                    "extracto" => "
+                        <p>
+                            Contamos con más de 1000 pruebas, de las cuales, la mayoría se procesan en cada uno de nuestros laboratorios.
+                        </p>
+                        <p>
+                         Gracias al Centro Nacional de Referencia de Salud Digna es posible analizar una gran cantidad de muestras biológicas y cultivos diariamente, ya que todo se realiza con equipos automatizados que permiten la reducción en los tiempos de espera.
+                        </p>
+                        <br>
+                        <p class='small'>
+                         Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/laboratorio-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "CovidPCR",
+                "titulo" => "COVID PCR",
+                "extracto" => "Se realiza en pacientes con síntomas o sospechas de contagio, Se realiza por técnica PCR.",
+                "imagen" => images()."/menu/servicios/pcr".$imgExt,
+                "submenu" => [
+                    "titulo" => "COVID PCR",
+                    "extracto" => "
+                        <p>
+                        Se realiza en pacientes con síntomas o sospechas de contagio. <br>
+                        Se realiza por técnica PCR. <br>
+                        Se otorga un diagnóstico preciso de la enfermedad. <br>
+                        El tiempo de entrega es de 24 a 72 hrs. <br>
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/pcr-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "CovidAntigeno",
+                "titulo" => "COVID Antígeno",
+                "extracto" => "Se realiza en pacientes que buscan confirmar si sus síntomas son sinónimo de contagio.",
+                "imagen" => images()."/menu/servicios/antigenos".$imgExt,
+                "submenu" => [
+                    "titulo" => "COVID Antígeno",
+                    "extracto" => "
+                        <p>
+                            Se realiza en pacientes que buscan confirmar si sus síntomas son sinónimo de contagio. <br>
+                            Se realiza una detección de antígenos del virus. <br>
+                            Se recomienda realizarla dentro de los primeros 7 días iniciando los síntomas. <br>
+                            El tiempo de entrega es de 2 hrs y los resultados se envían automáticamente por WhatsApp. 
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/antigenos-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Ultrasonido",
+                "titulo" => "Ultrasonido",
+                "extracto" => "Utilizando un dispositivo llamado sonda se envían ondas de sonido que son recogidas por ella misma.",
+                "imagen" => images()."menu/servicios/ultrasonido".$imgExt,
+                "submenu" => [
+                    "titulo" => "Ultrasonido",
+                    "extracto" => "
+                        <p>
+                            Utilizando un dispositivo llamado sonda se envían ondas de sonido que son recogidas por ella misma y son interpretadas por una computadora para generar una imagen en tiempo real del interior de tu cuerpo. 
+                            <br>
+                            Las imágenes son utilizadas por los médicos para diagnosticar condiciones en las diferentes partes del cuerpo. 
+                        </p>
+                        <strong>Ultrasonido obstétrico </strong>
+                        <p>
+                            Este tipo de estudio sirve a las futuras mamás para observar el estado de salud de su bebé. Si además optan por la opción en 4D, ¡podrán apreciar a mayor detalle sus rasgos!
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/ultrasonido-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Lentes",
+                "titulo" => "Lentes",
+                "extracto" => "Los errores de refracción son la condición más común en la visión de las personas.",
+                "imagen" => images()."menu/servicios/lentes".$imgExt,
+                "submenu" => [
+                    "titulo" => "Lentes",
+                    "extracto" => "
+                        <p>
+                        Los errores de refracción son la condición más común en la visión de las personas. Pueden causar dificultad para ver de lejos, de cerca o para enfocar objetos.
+                        <p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/lentes-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Electrocardiograma",
+                "titulo" => "Electrocardiograma",
+                "extracto" => "El electrocardiograma es un proceso seguro, sin representar riesgo para el paciente.",
+                "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
+                "submenu" => [
+                    "titulo" => "Electrocardiograma",
+                    "extracto" => "
+                        <p>
+                        El electrocardiograma es un proceso seguro, sin representar riesgo para el paciente. Para más información comunícate con nosotros a través del chat.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/electrocardiograma-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Tomografia",
+                "titulo" => "Tomografía",
+                "extracto" => "La tomografía computarizada es un procedimiento para diagnóstico con imágenes, el cual es indoloro.",
+                "imagen" => images()."menu/servicios/tomografia".$imgExt,
+                "submenu" => [
+                    "titulo" => "Tomografía",
+                    "extracto" => "
+                        <p>
+                            La tomografía computarizada es un procedimiento para diagnóstico con imágenes, el cual es indoloro, representan reconstrucciones computarizadas de los tejidos y los órganos del cuerpo. 
+                        </p>
+                        <p>
+                            <strong>Algunos estudios con los que contamos son: </strong><br>
+                            Tomografía de abdomen <br>
+                            Tomografía de cabeza <br>
+                            Tomografía de extremidades 
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/tomografia-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "RayosX",
+                "titulo" => "Rayos X",
+                "extracto" => "Contamos con equipos de rayos x de alta resolución, con el objeto de auxiliar a los médicos en la integración.",
+                "imagen" => images()."menu/servicios/rayos-x".$imgExt,
+                "submenu" => [
+                    "titulo" => "Rayos X",
+                    "extracto" => "
+                        <p>
+                            Contamos con equipos de rayos x de alta resolución, con el objeto de auxiliar a los médicos en la integración de un diagnóstico, mediante imágenes de calidad.<br> 
+                            Nuestros estudios especializados son interpretados por profesionales de la salud especialistas en la materia, quienes cuentan con certificación expedida por una institución de enseñanza superior o de salud reconocida oficialmente. 
+                        </p>
+                        <p>
+                            <strong>Algunos estudios con los que contamos son: </strong><br>
+                            Rayos X de extremidades <br>
+                            Rayos X de abdomen <br>
+                            Rayos X de cabeza 
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/rayos-x-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Desintrometria",
+                "titulo" => "Densitometría",
+                "extracto" => "Se trata de una prueba común, rápida, sencilla e indolora, por lo que puede ser realizado sin comprometer la.",
+                "imagen" => images()."menu/servicios/densitometria".$imgExt,
+                "submenu" => [
+                    "titulo" => "Densitometría",
+                    "extracto" => "
+                        <p>
+                        Se trata de una prueba común, rápida, sencilla e indolora, por lo que puede ser realizado sin comprometer la comodidad del paciente. 
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/densitometria-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Resonancia",
+                "titulo" => "Resonancia Magnética",
+                "extracto" => "Es un procedimiento no invasivo e indoloro que se realiza en Salud Digna. Algunos estudios con los que.",
+                "imagen" => images()."menu/servicios/resonancia".$imgExt,
+                "submenu" => [
+                    "titulo" => "Resonancia Magnética",
+                    "extracto" => "
+                        <p>
+                        Es un procedimiento no invasivo e indoloro que se realiza en Salud Digna. 
+                        </p>
+                        <p>
+                            <strong>Algunos estudios con los que contamos son:</strong> 
+                            Resonancia Magnética de cabeza <br> 
+                            Resonancia Magnética de tórax <br>
+                            Resonancia Magnética de columna
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/resonancia-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Papanicolaou",
+                "titulo" => "Papanicolaou",
+                "extracto" => "Como medida para la pronta detección de infecciones por el virus del papiloma humano (VPH) que es la principal.",
+                "imagen" => images()."menu/servicios/papanicolaou".$imgExt,
+                "submenu" => [
+                    "titulo" => "Papanicolaou",
+                    "extracto" => "
+                        <p>
+                            Como medida para la pronta detección de infecciones por el virus del papiloma humano (VPH) que es la principal causa de todos los cánceres de cuello uterino, es recomendado realizarse la prueba del Papanicolaou. 
+                        </p>
+                        <p>
+                            Consiste en realizar una recolección de células en el cérvix. La muestra es enviada a nuestro laboratorio donde es examinada por un médico patólogo, con el propósito de detectar alguna anormalidad en su composición. Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/papanicolaou-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Mastografia",
+                "titulo" => "Mastografía",
+                "extracto" => "Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y.",
+                "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
+                "submenu" => [
+                    "titulo" => "Mastografía",
+                    "extracto" => "
+                        <p>
+                            Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y características especifícas, es por ello que deben ser solicitados por el médico de acuerdo con una valoración y previo consentimiento de la paciente. 
+                        </p> 
+                        <p>
+                            Para más información comunícate con nosotros a tráves del chat. Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/electrocardiograma-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Nutricion",
+                "titulo" => "Nutrición",
+                "extracto" => "Los excesos pueden traer riesgos a nuestro estilo de vida y con ello, caer en enfermedades cardiovasculares.",
+                "imagen" => images()."menu/servicios/nutricion".$imgExt,
+                "submenu" => [
+                    "titulo" => "Nutrición",
+                    "extracto" => "
+                        <p>
+                            Los excesos pueden traer riesgos a nuestro estilo de vida y con ello, caer en enfermedades cardiovasculares y diabetes. Para ello, Salud Digna ofrece servicios de nutrición, mediante nuestro programa PreveAcción, donde recibirás asesoría nutricional, para mejorar tus hábitos alimenticios; además recibirás estudios de laboratorio para verificar los contenidos de glucosa, triglicéridos y colesterol. 
+                        </p>
+                        <p>
+                            Con estos resultados te daremos seguimiento para prevenir enfermedades crónico-degenerativas como diabetes, hipertensión, obesidad y dislipidemias. 
+                        </p>
+                        <br>
+                        <p class='small'>
+                            Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
+                        </p>
+                    ",
+                    "subImagen" => images()."menu/servicios/nutricion-web".$imgExt
+                ]
+            ],
+        ]
+    ],
+    [
+        "id" => "Pacientes", 
+        "titulo" => "Pacientes",
+        "megamenu" => true,
+        "items" => [
+            [
+                "id" => "Resultados",
+                "titulo" => "Consulta de resultados",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "submenu" => [
+                    "subTitulo" => "",
+                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "subImagen" => images()."menu/pacientes/resultados-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Citas",
+                "titulo" => "Haz una cita",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/citas".$imgExt,
+                "submenu" => [
+                    "subTitulo" => "",
+                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "subImagen" => images()."menu/pacientes/citas-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Preparaciones",
+                "titulo" => "Precios y preparaciones",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/preparaciones".$imgExt,
+                "submenu" => [
+                    "subTitulo" => "",
+                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "subImagen" => images()."menu/pacientes/preparaciones-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Devoluciones",
+                "titulo" => "Cambios en mi cita y devoluciones",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/citas".$imgExt,
+                "submenu" => [
+                    "subTitulo" => "",
+                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "subImagen" => images()."menu/pacientes/citas-web".$imgExt
+                ]
+            ],
+            [
+                "id" => "Facturas",
+                "titulo" => "¿Necesitas Factura?",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/factura".$imgExt,
+                "submenu" => [
+                    "subTitulo" => "",
+                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "subImagen" => images()."menu/pacientes/factura-web".$imgExt
+                ]
             ]
         ]
     ],
-    "servicios" => [
-        0 => [
-            "id" => "Laboratorio",
-            "titulo" => "Laboratorio",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/servicios/laboratorio".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/laboratorio-web".$imgExt
-            ]
-        ],
-        1 => [
-            "id" => "Ultrasonido",
-            "titulo" => "Ultrasonido",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/ultrasonido".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/ultrasonido-web".$imgExt
-            ]
-        ],
-        2 => [
-            "id" => "Lentes",
-            "titulo" => "Lentes",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/lentes".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/lentes-web".$imgExt
-            ]
-        ],
-        3 => [
-            "id" => "Electrocardiograma",
-            "titulo" => "Electrocardiograma",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/electrocardiograma-web".$imgExt
-            ]
-        ],
-        4 => [
-            "id" => "Tomografia",
-            "titulo" => "Tomografía",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/tomografia".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/tomografia-web".$imgExt
-            ]
-        ],
-        5 => [
-            "id" => "RayosX",
-            "titulo" => "Rayos X",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/rayos-x".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/rayos-x-web".$imgExt
-            ]
-        ],
-        6 => [
-            "id" => "Desintrometria",
-            "titulo" => "Densitometría",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/densitometria".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Desintrometria",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/densitometria-web".$imgExt
-            ]
-        ],
-        7 => [
-            "id" => "Resonancia",
-            "titulo" => "Resonancia Magnética",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/resonancia".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "",
-                "subImagen" => images()."menu/servicios/resonancia-web".$imgExt
-            ]
-        ],
-        8 => [
-            "id" => "Papanicolaou",
-            "titulo" => "Papanicolaou",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/papanicolaou".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Papanicolaou",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/papanicolaou-web".$imgExt
-            ]
-        ],
-        9 => [
-            "id" => "Nutricion",
-            "titulo" => "Nutrición",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."menu/servicios/nutricion".$imgExt,
-            "submenu" => [
-                "subTitulo" => "Nutricion",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/servicios/nutricion-web".$imgExt
-            ]
-        ],
-    ],
-    "pacientes" => [
-        0 => [
-            "id" => "Resultados",
-            "titulo" => "Consulta de resultados",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/pacientes/resultados-web".$imgExt
-            ]
-        ],
-        1 => [
-            "id" => "Citas",
-            "titulo" => "Haz una cita",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/pacientes/citas".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/pacientes/citas-web".$imgExt
-            ]
-        ],
-        2 => [
-            "id" => "Preparaciones",
-            "titulo" => "Precios y preparaciones",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/pacientes/preparaciones".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/pacientes/preparaciones-web".$imgExt
-            ]
-        ],
-        3 => [
-            "id" => "Devoluciones",
-            "titulo" => "Cambios en mi cita y devoluciones",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/pacientes/citas".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/pacientes/citas-web".$imgExt
-            ]
-        ],
-        4 => [
-            "id" => "Facturas",
-            "titulo" => "¿Necesitas Factura?",
-            "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-            "imagen" => images()."/menu/pacientes/factura".$imgExt,
-            "submenu" => [
-                "subTitulo" => "",
-                "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "subImagen" => images()."menu/pacientes/factura-web".$imgExt
+    [
+        "id" => "Atencion", 
+        "titulo" => "Atención a empresas",
+        "megamenu" => false,
+        "items" => [
+            [
+                "titulo" => "Ver paquetes",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Check ups",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Perfiles de admisión",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+            ],
+            [
+                "titulo" => "Contactar con un agente",
+                "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
             ]
         ]
     ]
@@ -256,330 +440,175 @@ $menu = [
             <div class="menu__caja">
                 <ul class="menu__links">
 
-                    <!-- INICIO MENU COVID -->
-                    <li class="menu__item megamenu" style="position: inherit">
-                        <button class="menu__link" id="menuCovid">
-                            COVID-19 <img loading="lazy" src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">    
-                        </button>
 
-                        <div class="menu__sombra mega">
-                            <div class="menu__nesting">
-                                <ul>
-                                    <?php foreach ($menu as $key => $servicio) {  
-                                        if ($key == "covid") {
-                                            foreach ($servicio as $value) {
-                                    ?>
-                                    <li class="menu__inside">
-                                        <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside" id="<?=$value['id']?>">
-                                            <?=$value['titulo']?>
-                                        </a>
-                                    </li>
-                                    <?php }}} ?>
-                                </ul>
+                    <?php
+                        foreach ($navMain as $key => $navLink) :
+                    ?>
+                            <li class="menu__item <?=$navLink["megamenu"] ? 'mega megamenu' : 'menu__item-show'?>" style="position: inherit">
 
-                                <div class="submenu">
-                                    <div class="contenedor">
+                                <!-- NAVLINK -->
+                                <button class="menu__link" id="menu<?=$navLink["id"]?>">
+                                    <?=$navLink["titulo"]?> 
+                                    <img loading="lazy" src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">    
+                                </button>
 
-                                        <?php foreach ($menu as $key => $covid) {  
-                                            if ($key == "covid") {
-                                                foreach ($covid as $value) {
-                                        ?>
-                                            <!-- PCR COVID -->
-                                            <div class="grid-2 d-none" name="<?=$value['id']?>">
-                                                <div class="card">
-                                                    <div class="columna">
-                                                        <div>
-                                                            <h2><?=$value['titulo']?></h2>
-                                                            <p><?=$value['extracto']?></p>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="columna">
-                                                        <img src="<?=$value['submenu']['subImagen']?>" 
-                                                        class="img-fluid banner" alt="Prueba PCR">
+                                <!-- MEGAMENU -->
+                                <div class="menu__sombra ">
+                                    <div class="menu__nesting"> 
+
+                                        <div>
+                                            <div class="<?=$navLink["megamenu"] ? 'scroll' : null?>">
+                                                <ul class="p-0">
+                                                    <?php
+                                                        foreach ($navLink["items"] as $key => $item) :
+                                                    ?>
+                                                        <li class="menu__inside">
+                                                            <a href="<?=base_url()?>/blank-page" 
+                                                            class="menu__link menu__link-inside" 
+                                                            id="<?=$item['id']?>">
+
+                                                                <div class="desktop">
+                                                                    <?=$item['titulo']?>
+                                                                </div>
+
+                                                                <div class="movil">
+                                                                    <div class="boxnav">
+                                                                        <div class="text">
+                                                                            <strong><?=$item['titulo']?></strong>
+                                                                            <p><?=$item['extracto']?></p>
+                                                                        </div>
+                                                                        <img src="<?=$item['imagen']?>" alt="">
+                                                                    </div>
+                                                                </div>          
+                                                                
+                                                                
+                                                            </a>
+                                                        </li>
+                                                    <?php
+                                                        endforeach
+                                                    ?>
+                                                </ul>
+
+                                                <div class="botonScroll" style="display: none;">
+                                                    <div>
+                                                        <button class="btnDownMega">
+                                                            <i class="icon-arrow-down"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
+                                               
                                             </div>
-                                        <?php }}} ?>
+                                            
+    
+                                            <!-- SUBMENU -->
+                                            <div class="submenu">
+                                                <div class="content">
+                                                    <?php
+                                                        foreach ($navLink["items"] as $key => $item) :
+                                                    ?>     
+                                                        <div class="d-none" name="<?=$item['id']?>">
+                                                            <div class="box">
+                                                                <div class="columna" style="width: 150%;">
+                                                                    <div>
+                                                                        <div>
+                                                                            <h2><?=$item['submenu']['titulo']?></h2>
+                                                                            <p><?=$item['submenu']['extracto']?></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                
+                                                                <div class="columna">
+                                                                    <img src="<?=$item['submenu']['subImagen']?>" 
+                                                                    class="img-fluid banner" alt="Prueba PCR">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php
+                                                        endforeach
+                                                    ?>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                       
 
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </li>
 
-                    <li class="menu__item menu__item-show d-lg-none">
-                        <button class="menu__link main">
-                            COVID-19 <img src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra">
-                            <ul class="menu__nesting">
-                                <?php foreach ($menu as $key => $covid) {  
-                                    if ($key == "covid") {
-                                        foreach ($covid as $value) {
-                                ?>
-                                    <li class="menu__inside">
-                                        <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">
-                                            <div class="boxnav">
-                                                <div class="text">
-                                                    <strong><?=$value['titulo']?></strong>
-                                                    <p>
-                                                        <?=$value['extracto']?>
-                                                    </p>
-                                                </div>
+                            </li>
+                    <?php
+                        endforeach;
+                    ?>
 
-                                                <img src="<?=$value['imagen']?>" alt="">
-                                            </div>
-                                        </a>
-                                    </li>
-                                <?php }}} ?>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- FIN MENU COVID -->
-        
 
-                    <!-- INICIO SERVICIOS -->
                     
-                    <li class="menu__item megamenu" style="position: inherit">
-                        <button class="menu__link" id="menuServicios">
-                            Servicios <img src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra mega">
-                            <div class="menu__nesting"> 
-                                <ul>
-                                    <?php foreach ($menu as $key => $servicio) {  
-                                        if ($key == "servicios") {
-                                            foreach ($servicio as $value) {
-                                    ?>
-                                        <li class="menu__inside">
-                                            <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside" id="<?=$value['id']?>">
-                                                <?=$value['titulo']?>
-                                            </a>
-                                        </li>
-                                        
-                                    <?php }}} ?>
-                                </ul>
-                                
-                                <div class="submenu">
-                                    <div class="contenedor">
-                                        <?php foreach ($menu as $key => $servicios) {  
-                                            if ($key == "servicios") {
-                                                foreach ($servicios as $value) {
-                                        ?>
-                                            <!-- PCR COVID -->
-                                            <div class="grid-2 d-none" name="<?=$value['id']?>">
-                                                <div class="card">
-                                                    <div class="columna">
-                                                        <div>
-                                                            <h2><?=$value['titulo']?></h2>
-                                                            <p><?=$value['extracto']?></p>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="columna">
-                                                        <img src="<?=$value['submenu']['subImagen']?>" 
-                                                        class="img-fluid banner" alt="Prueba PCR">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <?php }}} ?>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="menu__item menu__item-show d-lg-none">
-                        <button class="menu__link main">
-                            Servicios <img src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra">
-                            <ul class="menu__nesting">
-                                
-                                <?php foreach ($menu as $key => $covid) {  
-                                    if ($key == "servicios") {
-                                        foreach ($covid as $value) {
-                                ?>
-                                    <li class="menu__inside">
-                                        <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">
-                                            <div class="boxnav">
-                                                <div class="text">
-                                                    <strong><?=$value['titulo']?></strong>
-                                                    <p>
-                                                        <?=$value['extracto']?>
-                                                    </p>
-                                                </div> 
-                                                <img src="<?=$value['imagen']?>" alt="">
-                                            </div>
-                                        </a>
-                                    </li>
-                                <?php }}} ?>
-
-                                
-                            </ul>
-                            <!-- <div class="submenu"></div> -->
-                        </div>
-                    </li>
-
-                    <!-- FIN DE SERVICIOS -->
-                    
-
-                    <li class="menu__item menu__item-show">
-                        <button class="menu__link main">
-                            Conócenos <img src="<?=images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra">
-                            <ul class="menu__nesting">
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">¿Quiénes somos?</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Historia</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Centro Nacional de Referencia</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Misión, visión y valores</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Bolsa de Trabajo</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/contactanos" class="menu__link menu__link-inside">Contáctanos</a>
-                                </li>
-                            </ul>
-                            <!-- <div class="submenu"></div> -->
-                        </div>
-                    </li>
-
-
-                    <!-- PACIENTES -->
-
-                    <li class="menu__item megamenu" style="position: inherit">
-                        <button class="menu__link main">
-                            Pacientes <img src="<?=images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra mega">
-                            <div class="menu__nesting">
-
-                                <ul>
-                                    <?php foreach ($menu as $key => $servicio) {  
-                                        if ($key == "pacientes") {
-                                            foreach ($servicio as $value) {
-                                    ?>
-                                        <li class="menu__inside">
-                                            <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside" id="<?=$value['id']?>">
-                                                <?=$value['titulo']?>
-                                            </a>
-                                        </li>
-                                        
-                                    <?php }}} ?>
-                                </ul>
-                                
-                                <div class="submenu">
-                                    <div class="contenedor">
-                                        <?php foreach ($menu as $key => $servicios) {  
-                                            if ($key == "pacientes") {
-                                                foreach ($servicios as $value) {
-                                        ?>
-                                            <!-- PCR COVID -->
-                                            <div class="grid-2 d-none" name="<?=$value['id']?>">
-                                                <div class="card">
-                                                    <div class="columna">
-                                                        <div>
-                                                            <h2><?=$value['titulo']?></h2>
-                                                            <p><?=$value['extracto']?></p>
-                                                        </div>
-                                                    </div>
-    
-                                                    <div class="columna">
-                                                        <img src="<?=$value['submenu']['subImagen']?>" 
-                                                        class="img-fluid banner" alt="Prueba PCR">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <?php }}} ?>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-                        </div>
-                    </li>
-
-                    <li class="menu__item menu__item-show d-lg-none">
-                        <button class="menu__link main">
-                            Pacientes <img src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra">
-                            <ul class="menu__nesting">
-                                
-                                <?php foreach ($menu as $key => $covid) {  
-                                    if ($key == "pacientes") {
-                                        foreach ($covid as $value) {
-                                ?>
-                                    <li class="menu__inside">
-                                        <a href="#" class="menu__link menu__link-inside">
-                                            <div class="boxnav">
-                                                <div class="text">
-                                                    <strong><?=$value['titulo']?></strong>
-                                                    <p>
-                                                        <?=$value['extracto']?>
-                                                    </p>
-                                                </div> 
-                                                <img src="<?=$value['imagen']?>" alt="">
-                                            </div>
-                                        </a>
-                                    </li>
-                                <?php }}} ?>
-                                
-                            </ul>
-                            <!-- <div class="submenu"></div> -->
-                        </div>
-                    </li>
-
-                    <!-- FIN PACIENTES -->
-                    
-        
-                    <li class="menu__item menu__item-show">
-                        <button href="javascript:void(0)" class="menu__link main">
-                            Atención a empresas <img src="<?=images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
-                        </button>
-        
-                        <div class="menu__sombra">
-                            <ul class="menu__nesting">
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Ver paquetes</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Check ups</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Perfiles de admisión</a>
-                                </li>
-                                <li class="menu__inside">
-                                    <a href="<?=base_url()?>/blank-page" class="menu__link menu__link-inside">Contactar con un agente</a>
-                                </li>
-                            </ul>
-                            <!-- <div class="submenu"></div> -->
-                        </div>
-                    </li>
-                    
-
-                    <li class="menu__item">
-                        <a href="<?=base_url()?>/blank-page" class="menu__link">
+                     <li class="menu__item">
+                        <a href="<base_url()?>/blank-page" class="menu__link">
                             Ubica tu clínica
                         </a>
                     </li>
+        
+
+                  
+                    <!-- <li class="menu__item menu__item-show">
+                        <button class="menu__link main">
+                            Conócenos <img src="<images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
+                        </button>
+        
+                        <div class="menu__sombra">
+                            <ul class="menu__nesting">
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">¿Quiénes somos?</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Historia</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Centro Nacional de Referencia</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Misión, visión y valores</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Bolsa de Trabajo</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/contactanos" class="menu__link menu__link-inside">Contáctanos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+
+        
+                    <!-- <li class="menu__item menu__item-show">
+                        <button href="javascript:void(0)" class="menu__link main">
+                            Atención a empresas <img src="<images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
+                        </button>
+        
+                        <div class="menu__sombra">
+                            <ul class="menu__nesting">
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Ver paquetes</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Check ups</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Perfiles de admisión</a>
+                                </li>
+                                <li class="menu__inside">
+                                    <a href="<base_url()?>/blank-page" class="menu__link menu__link-inside">Contactar con un agente</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li> -->
+                    
+
+                    <!-- <li class="menu__item">
+                        <a href="<base_url()?>/blank-page" class="menu__link">
+                            Ubica tu clínica
+                        </a>
+                    </li> -->
 
 
                 </ul>
@@ -599,25 +628,30 @@ $menu = [
                         </div>
                     </div>
                 </footer>
+
+
             </div>
 
 
             <div class="menu__accion" style="display: flex;">
 
-                <button class="hamburger hamburger--collapse" type="button" aria-label="Abrir menú" readonly="true">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-    
-    
-                <div style="display: flex;align-items: center;font-size: 2rem;margin-left: 1.2rem;">
-                    <button id="btn-buscar">
-                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
-                        <img src="<?=images()?>/iconos/search.svg" alt="icono buscar" style="width: 35px;height: 35px;">
+                    <button class="hamburger hamburger--collapse" type="button" aria-label="Abrir menú" readonly="true">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
                     </button>
+        
+        
+                    <!-- <div style="display:flex; align-items: center;font-size: 2rem;margin-left: 1.2rem;">
+                        <button id="btn-buscar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <img src="<images()?>/iconos/search.svg" alt="icono buscar" style="width: 35px;height: 35px;">
+                        </button>
+                    </div> -->
                 </div>
-            </div>
+
+
+            
 
         </div>
 

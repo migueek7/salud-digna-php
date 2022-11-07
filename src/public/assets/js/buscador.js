@@ -6,20 +6,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
             form_bucador.reset();
 
-            btn_buscar.addEventListener('click', function() {
-
-                cerrarTodo();
-
-                fondo_oscuro.classList.toggle('fondo-oscuro__activo');
+            // btn_buscar.addEventListener('click', function() {
+            //     cerrarTodo();
+            //     fondo_oscuro.classList.toggle('fondo-oscuro__activo');
                 
-
-                if (buscador_caja.clientHeight) {
-                    //ocultar_buscador();
-                    cerrarTodo();
-                } else {
-                    mostrar_buscador();     
-                }
-            });
+            //     if (buscador_caja.clientHeight) {
+            //         //ocultar_buscador();
+            //         cerrarTodo();
+            //     } else {
+            //         mostrar_buscador();     
+            //     }
+            // });
 
 
             function mostrar_buscador() 

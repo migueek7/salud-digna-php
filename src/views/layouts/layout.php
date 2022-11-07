@@ -25,32 +25,28 @@
         <link rel="stylesheet" href="<?=css()?>plugins/animate.min.css">
         <link rel="stylesheet" href="<?=css()?>iconos.min.css">
         <link rel="stylesheet" href="<?=css()?>core.min.css">
-        <link rel="stylesheet" href="<?=css()?>menu.min.css">
-        <link rel="stylesheet" href="<?=css()?>menu-modificado.min.css">
+        <link rel="stylesheet" href="<?=css()?>menu.css">
+        <link rel="stylesheet" href="<?=css()?>menu-modificado.css">
         <link rel="stylesheet" href="<?=css()?>estilos.min.css">
         
         <?php if (isset($estilos)) : foreach ($estilos as $ruta) : ?>
         <link rel="stylesheet" href="<?=$ruta;?>.css">
         <?php endforeach; endif; ?>
 
-        <link rel="stylesheet" media="(prefers-color-scheme: light)" href="<?=css()?>light.css">
-        <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="<?=css()?>dark.css">
+        <!-- <link rel="stylesheet" media="(prefers-color-scheme: light)" href="<css()?>light.css"> -->
+        <!-- <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="<css()?>dark.css"> -->
         <link rel="stylesheet" href="<?=css()?>main.css">
-
-        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
         
-
         <style>
             .loading{position:fixed;background:var(--background-color2);height:100vh;width:100%;z-index:100;display:flex;justify-content:center;align-items:center}.loading-inactivo{-webkit-animation:fadeout 1s ease-in-out;animation:fadeout 1s ease-in-out;pointer-events:none;opacity:0}@keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes fadeout{from{opacity:1}to{opacity:0}}.spinner{width:40px;height:40px;margin:100px auto;background-color:#008959;border-radius:100%;-webkit-animation:sk-scaleout 1.0s infinite ease-in-out;animation:sk-scaleout 1.0s infinite ease-in-out;position:absolute}@-webkit-keyframes sk-scaleout{0%{-webkit-transform:scale(0)}100%{-webkit-transform:scale(1.0);opacity:0}}@keyframes sk-scaleout{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1.0);transform:scale(1.0);opacity:0}}
         </style>
 
-        <!-- <script src="https://jquery-ui.googlecode.com/svn-history/r3982/trunk/ui/i18n/jquery.ui.datepicker-nl.js"></script> -->
     </head>
 
     <body>
         <div id="loading" class="loading"><div class="spinner"></div></div>
         <div id="fondo-oscuro" class="fondo-oscuro"></div>
-        <dark-mode-toggle id="dark-mode-toggle" dark="Modo Claro" light="Modo Oscuro"></dark-mode-toggle>
+        <!-- <dark-mode-toggle id="dark-mode-toggle" dark="Modo Claro" light="Modo Oscuro"></dark-mode-toggle> -->
 
         <header class="header">
             <?=$this->fetch('modules/cintillo') ?>
@@ -68,9 +64,9 @@
         </footer>
 
         <!-- Script -->
-        <script src="<?=js()?>funciones.min.js"></script>
-        <script src="<?=js()?>menu.min.js"></script>
-        <script src="<?=js()?>buscador.min.js"></script>
+        <script src="<?=js()?>funciones.js"></script>
+        <script src="<?=js()?>menu.js"></script>
+        <script src="<?=js()?>buscador.js"></script>
         <script src="<?=js()?>main.min.js" defer></script>
         <script type="module" src="https://googlechromelabs.github.io/dark-mode-toggle/src/dark-mode-toggle.mjs" defer></script>
 

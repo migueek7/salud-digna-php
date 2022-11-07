@@ -65,7 +65,8 @@
   --transform: rotate(-90deg);
 }
 .menu__item:hover {
-  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* mostrar */
+  /* --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+  --clip: polygon(0 0, 100% 0, 100% 200%, 0% 200%);
   --transform: rotate(0);
 }
 .menu__item-show .menu__link::after {
@@ -214,6 +215,8 @@
 }
 .menu__item.megamenu .menu__nesting {
   width: 100%;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 .menu__item.megamenu .menu__nesting > ul {
   /* display: inline-block; */
@@ -442,6 +445,7 @@
     -ms-transition: height 0.3s;
     -o-transition: height 0.3s;
   }
+ 
   .menu__link-inside {
     width: 90%;
     margin-left: auto;
