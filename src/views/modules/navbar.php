@@ -10,31 +10,37 @@ $navMain = [
                 "titulo" => "¿Quiénes somos?",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page"
             ],
             [
                 "titulo" => "Historia",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page"
             ],
             [
                 "titulo" => "Centro Nacional de Referencia",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page"
             ],
             [
                 "titulo" => "Misión, visión y valores",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page"
             ],
             [
                 "titulo" => "Bolsa de Trabajo",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page"
             ],
             [
                 "titulo" => "Contáctanos",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => "contactanos"
             ]
         ],
     ],
@@ -50,6 +56,7 @@ $navMain = [
                     Contamos con más de 1000 pruebas, de las cuales, la mayoría se procesan en cada uno de nuestros laboratorios.
                 ",
                 "imagen" => images()."/menu/servicios/laboratorio".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Laboratorio",
                     "extracto" => "
@@ -72,6 +79,7 @@ $navMain = [
                 "titulo" => "COVID PCR",
                 "extracto" => "Se realiza en pacientes con síntomas o sospechas de contagio, Se realiza por técnica PCR.",
                 "imagen" => images()."/menu/servicios/pcr".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "COVID PCR",
                     "extracto" => "
@@ -94,6 +102,7 @@ $navMain = [
                 "titulo" => "COVID Antígeno",
                 "extracto" => "Se realiza en pacientes que buscan confirmar si sus síntomas son sinónimo de contagio.",
                 "imagen" => images()."/menu/servicios/antigenos".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "COVID Antígeno",
                     "extracto" => "
@@ -116,6 +125,7 @@ $navMain = [
                 "titulo" => "Ultrasonido",
                 "extracto" => "Utilizando un dispositivo llamado sonda se envían ondas de sonido que son recogidas por ella misma.",
                 "imagen" => images()."menu/servicios/ultrasonido".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Ultrasonido",
                     "extracto" => "
@@ -141,6 +151,7 @@ $navMain = [
                 "titulo" => "Lentes",
                 "extracto" => "Los errores de refracción son la condición más común en la visión de las personas.",
                 "imagen" => images()."menu/servicios/lentes".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Lentes",
                     "extracto" => "
@@ -160,6 +171,7 @@ $navMain = [
                 "titulo" => "Electrocardiograma",
                 "extracto" => "El electrocardiograma es un proceso seguro, sin representar riesgo para el paciente.",
                 "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Electrocardiograma",
                     "extracto" => "
@@ -175,6 +187,7 @@ $navMain = [
                 "titulo" => "Tomografía",
                 "extracto" => "La tomografía computarizada es un procedimiento para diagnóstico con imágenes, el cual es indoloro.",
                 "imagen" => images()."menu/servicios/tomografia".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Tomografía",
                     "extracto" => "
@@ -200,6 +213,7 @@ $navMain = [
                 "titulo" => "Rayos X",
                 "extracto" => "Contamos con equipos de rayos x de alta resolución, con el objeto de auxiliar a los médicos en la integración.",
                 "imagen" => images()."menu/servicios/rayos-x".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Rayos X",
                     "extracto" => "
@@ -226,6 +240,7 @@ $navMain = [
                 "titulo" => "Densitometría",
                 "extracto" => "Se trata de una prueba común, rápida, sencilla e indolora, por lo que puede ser realizado sin comprometer la.",
                 "imagen" => images()."menu/servicios/densitometria".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Densitometría",
                     "extracto" => "
@@ -245,6 +260,7 @@ $navMain = [
                 "titulo" => "Resonancia Magnética",
                 "extracto" => "Es un procedimiento no invasivo e indoloro que se realiza en Salud Digna. Algunos estudios con los que.",
                 "imagen" => images()."menu/servicios/resonancia".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Resonancia Magnética",
                     "extracto" => "
@@ -270,6 +286,7 @@ $navMain = [
                 "titulo" => "Papanicolaou",
                 "extracto" => "Como medida para la pronta detección de infecciones por el virus del papiloma humano (VPH) que es la principal.",
                 "imagen" => images()."menu/servicios/papanicolaou".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Papanicolaou",
                     "extracto" => "
@@ -292,6 +309,7 @@ $navMain = [
                 "titulo" => "Mastografía",
                 "extracto" => "Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y.",
                 "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Mastografía",
                     "extracto" => "
@@ -314,6 +332,7 @@ $navMain = [
                 "titulo" => "Nutrición",
                 "extracto" => "Los excesos pueden traer riesgos a nuestro estilo de vida y con ello, caer en enfermedades cardiovasculares.",
                 "imagen" => images()."menu/servicios/nutricion".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Nutrición",
                     "extracto" => "
@@ -343,6 +362,7 @@ $navMain = [
                 "titulo" => "Consulta de resultados",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulos" => "Consulta de resultados",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
@@ -354,6 +374,7 @@ $navMain = [
                 "titulo" => "Haz una cita",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/citas".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Haz una cita",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
@@ -365,6 +386,7 @@ $navMain = [
                 "titulo" => "Precios y preparaciones",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/preparaciones".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Precios y preparaciones",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
@@ -376,6 +398,7 @@ $navMain = [
                 "titulo" => "Cambios en mi cita y devoluciones",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/citas".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Cambios en mi cita y devoluciones",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
@@ -387,6 +410,7 @@ $navMain = [
                 "titulo" => "¿Necesitas Factura?",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/factura".$imgExt,
+                "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "¿Necesitas Factura?",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
@@ -404,21 +428,25 @@ $navMain = [
                 "titulo" => "Ver paquetes",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page",
             ],
             [
                 "titulo" => "Check ups",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page",
             ],
             [
                 "titulo" => "Perfiles de admisión",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page",
             ],
             [
                 "titulo" => "Contactar con un agente",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "ruta" => base_url()."/blank-page",
             ]
         ]
     ]
@@ -463,7 +491,7 @@ $navMain = [
                                                         foreach ($navLink["items"] as $key => $item) :
                                                     ?>
                                                         <li class="menu__inside">
-                                                            <a href="<?=base_url()?>/blank-page" 
+                                                            <a href="<?=$item['ruta']?>" 
                                                             class="menu__link menu__link-inside" 
                                                             id="<?=isset($item['id']) ? $item['id'] : null?>">
 
