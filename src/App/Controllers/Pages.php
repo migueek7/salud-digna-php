@@ -253,7 +253,13 @@ class Pages extends Controller
 
     public function error404()
     {
-        $this->templates->addData(['title' => "Error 404"]);
+        $SEO = [
+            "title"         => "ERROR 404",
+            "description"   => "",
+            "keywords"      => ""
+        ];
+
+        $this->templates->addData(['title' => "Error 404", 'SEO' => $SEO]);
         echo $this->templates->render('pages/error404');
     }
     

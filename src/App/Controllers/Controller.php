@@ -11,6 +11,6 @@ class Controller
     public function __construct()
     {
         $this->templates = new Engine('./views');
-        $this->templates->loadExtension(new \League\Plates\Extension\URI($_SERVER['REQUEST_URI']));   
+        $this->templates->loadExtension(new URI($_SERVER['REQUEST_URI']));   
     }
 }

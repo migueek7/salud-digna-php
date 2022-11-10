@@ -1,4 +1,41 @@
 <?php 
+/* -------------------------------------------------------------------------- */
+/*                                    CORS                                    */
+/* -------------------------------------------------------------------------- */
+
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Authorization, Accept, Access-Control-Allow-Methods");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Allow: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Credentials");
+$method = $_SERVER['REQUEST_METHOD'];
+if($method == "OPTIONS") {
+    $json = [
+        'status' => 200,
+        'statuText' => "ok"
+    ];
+    echo json_encode($json, http_response_code($json["status"]));
+    return;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               Mostrar Errores                              */
+/* -------------------------------------------------------------------------- */
+date_default_timezone_set('America/Mazatlan');
+//DESARROLLO
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 1);
+// ini_set('error_reporting', E_ALL);
+
+//PRODUCCION
+error_reporting(E_ALL);
+ini_set('ignore_repeated_errors', TRUE);
+ini_set('display_errors', FALSE);
+ini_set('log_errors', TRUE);
+ini_set('error_log', 'logs/php-error.log');
+/* -------------------------------------------------------------------------- */
+/*                                  Includes                                  */
+/* -------------------------------------------------------------------------- */
 require_once "./vendor/autoload.php";
 require_once "./helpers/helpers.php";
 
@@ -27,43 +64,22 @@ if (count($arrayUrl) == 1) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                    CORS                                    */
-/* -------------------------------------------------------------------------- */
-
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Authorization, Accept, Access-Control-Allow-Methods");
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-header("Allow: GET, POST, OPTIONS, PUT, DELETE");
-header("Access-Control-Allow-Credentials");
-$method = $_SERVER['REQUEST_METHOD'];
-if($method == "OPTIONS") {
-    $json = [
-        'status' => 200,
-        'statuText' => "ok"
-    ];
-    echo json_encode($json, http_response_code($json["status"]));
-    return;
-}
-
-/* -------------------------------------------------------------------------- */
 /*                            CONTROLADOR DE RUTAS                            */
 /* -------------------------------------------------------------------------- */
 
+$getRoutes = new App\Controllers\Routes;
+$arrayRutas = $getRoutes->getRoutes();
 $router = new AltoRouter();
 
-$router->map( 'GET', '/', 'Pages#home');
-$router->map( 'GET', '/registro', 'Pages#registro');
-$router->map( 'GET', '/iniciar-sesion', 'Pages#ingreso');
-$router->map( 'GET', '/restablecer-contrasena', 'Pages#restablecerContrasena');
-$router->map( 'GET', '/nueva-contrasena', 'Pages#nuevaContrasena');
-$router->map( 'GET', '/contactanos', 'Pages#contacto');
-$router->map( 'GET', '/perfil', 'Pages#perfil');
-$router->map( 'POST', '/login', 'Usuarios#login');
-$router->map( 'GET', '/salir', 'Usuarios#salir');
-$router->map( 'POST', '/sitioiniciarsesion', 'Usuarios#login');
-$router->map( 'POST', '/prueba', 'Usuarios#prueba');
-
-$router->map( 'GET', '/blank-page', 'Pages#blankpage');
+foreach ($arrayRutas as $clase => $rutas) {
+    foreach ($rutas as $value) {
+        $router->map(
+            $value['method'], 
+            $value['ruta'], 
+            $clase.'#'.$value['function']
+        );
+    }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                     VALIDAR SI EXISTE LA RUTA INGRESADA                    */

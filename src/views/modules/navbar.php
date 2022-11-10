@@ -344,8 +344,8 @@ $navMain = [
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
                 "submenu" => [
-                    "subTitulo" => "",
-                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "titulos" => "Consulta de resultados",
+                    "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/resultados-web".$imgExt
                 ]
             ],
@@ -355,8 +355,8 @@ $navMain = [
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/citas".$imgExt,
                 "submenu" => [
-                    "subTitulo" => "",
-                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "titulo" => "Haz una cita",
+                    "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/citas-web".$imgExt
                 ]
             ],
@@ -366,8 +366,8 @@ $navMain = [
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/preparaciones".$imgExt,
                 "submenu" => [
-                    "subTitulo" => "",
-                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "titulo" => "Precios y preparaciones",
+                    "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/preparaciones-web".$imgExt
                 ]
             ],
@@ -377,8 +377,8 @@ $navMain = [
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/citas".$imgExt,
                 "submenu" => [
-                    "subTitulo" => "",
-                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "titulo" => "Cambios en mi cita y devoluciones",
+                    "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/citas-web".$imgExt
                 ]
             ],
@@ -388,8 +388,8 @@ $navMain = [
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/factura".$imgExt,
                 "submenu" => [
-                    "subTitulo" => "",
-                    "subDescripcion" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
+                    "titulo" => "¿Necesitas Factura?",
+                    "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/factura-web".$imgExt
                 ]
             ]
@@ -465,7 +465,7 @@ $navMain = [
                                                         <li class="menu__inside">
                                                             <a href="<?=base_url()?>/blank-page" 
                                                             class="menu__link menu__link-inside" 
-                                                            id="<?=$item['id']?>">
+                                                            id="<?=isset($item['id']) ? $item['id'] : null?>">
 
                                                                 <div class="desktop">
                                                                     <?=$item['titulo']?>
@@ -506,19 +506,23 @@ $navMain = [
                                                     <?php
                                                         foreach ($navLink["items"] as $key => $item) :
                                                     ?>     
-                                                        <div class="d-none" name="<?=$item['id']?>">
+                                                        <div class="d-none" name="<?=isset($item['id']) ? $item['id'] : null?>">
                                                             <div class="box">
                                                                 <div class="columna" style="width: 150%;">
                                                                     <div>
                                                                         <div>
-                                                                            <h2><?=$item['submenu']['titulo']?></h2>
-                                                                            <p><?=$item['submenu']['extracto']?></p>
+                                                                            <h2>
+                                                                                <?=isset($item['submenu']['titulo']) ? $item['submenu']['titulo'] : null?>
+                                                                            </h2>
+                                                                            <p>
+                                                                                <?=isset($item['submenu']['extracto']) ? $item['submenu']['extracto'] : null?>
+                                                                            </p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                 
                                                                 <div class="columna">
-                                                                    <img src="<?=$item['submenu']['subImagen']?>" 
+                                                                    <img src="<?=isset($item['submenu']['subImagen']) ? $item['submenu']['subImagen'] : null?>" 
                                                                     class="img-fluid banner" alt="Prueba PCR">
                                                                 </div>
                                                             </div>
@@ -543,7 +547,7 @@ $navMain = [
 
                     
                      <li class="menu__item">
-                        <a href="<base_url()?>/blank-page" class="menu__link">
+                        <a href="<?=base_url()?>/blank-page" class="menu__link">
                             Ubica tu clínica
                         </a>
                     </li>
