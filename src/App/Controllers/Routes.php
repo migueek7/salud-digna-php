@@ -12,6 +12,7 @@ class Routes {
                 ["method" => "GET", "ruta" => "/restablecer-contrasena", "function" => "restablecerContrasena"],
                 ["method" => "GET", "ruta" => "/nueva-contrasena", "function" => "nuevaContrasena"],
                 ["method" => "GET", "ruta" => "/contactanos", "function" => "contacto"],
+                ["method" => "GET", "ruta" => "/conocenos", "function" => "conocenos"],
                 ["method" => "GET", "ruta" => "/perfil", "function" => "perfil"],
                 ["method" => "GET", "ruta" => "/blank-page", "function" => "blankpage"]
             ],

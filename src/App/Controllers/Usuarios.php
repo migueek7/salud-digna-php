@@ -46,7 +46,7 @@ class UsuarioController extends Controller
     public function prueba() {
 
         if (isset($_POST)) {
-            dep($_POST);
+            pre($_POST);
 
             // $json = json_decode($_POST);
             //echo json_encode($json);

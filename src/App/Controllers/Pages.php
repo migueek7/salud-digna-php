@@ -89,7 +89,7 @@ class Pages extends Controller
             ['route' => js().'plugins/sweetalert2.min'],
             ['route' => js().'plugins/swiper-bundle.min'],
             ['route' => js().'plugins/alerts'],
-            ['route' =>js().'ingreso']
+            ['route' => js().'ingreso']
         ];
 
         $SEO = [
@@ -221,6 +221,39 @@ class Pages extends Controller
 
         $this->templates->addData(['SEO' => $SEO, 'estilos' => $estilos, 'scripts' => $scripts]);
         echo $this->templates->render($this->entrada.'/contacto');
+    }
+
+    public function conocenos()
+    {   
+        $estilos = [
+            css().'salud-digna/bootstrap.min',
+            css().'plugins/sweetalert2.min',
+            css().'plugins/swiper-bundle.min',
+            css().'plugins/alerts',
+            css().'form',
+            css().'contacto',
+            css().'estilos'
+        ];
+
+        $scripts = [
+            ['route' => js().'salud-digna/jquery.min'],
+            ['route' => js().'salud-digna/jquery-ui.min'],
+            ['route' => js().'salud-digna/bootstrap.min'],
+            ['route' => js().'plugins/sweetalert2.min'],
+            ['route' => js().'plugins/swiper-bundle.min'],
+            ['route' => js().'plugins/alerts'],
+            ['route' => js().'main'],
+            ['route' => js().'contacto', 'module' => true]
+        ];
+
+        $SEO = [
+            "title"         => "Conocenos",
+            "description"   => "Compártenos un poco sobre ti y conviértete en uno de nuestros Pacientes Salud Digna. Obtén beneficios antes que nadie, lleva un control de tu prevención y conoce los estudios que hoy necesitas.",
+            "keywords"      => "Salud Digna, Clinica de Salud, Salud"
+        ];
+
+        $this->templates->addData(['SEO' => $SEO, 'estilos' => $estilos, 'scripts' => $scripts]);
+        echo $this->templates->render($this->entrada.'/conocenos');
     }
 
 
