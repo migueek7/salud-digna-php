@@ -79,7 +79,7 @@
 .menu__item > .menu__link {
   font-weight: bold;
   font-size: 1.4rem;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
   font-family: "Open Sans Bold";
 }
 .menu__link {

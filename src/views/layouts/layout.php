@@ -25,9 +25,9 @@
         <link rel="stylesheet" href="<?=css()?>plugins/animate.min.css">
         <link rel="stylesheet" href="<?=css()?>iconos.min.css">
         <link rel="stylesheet" href="<?=css()?>core.min.css">
-        <link rel="stylesheet" href="<?=css()?>menu.css">
-        <link rel="stylesheet" href="<?=css()?>menu-modificado.css">
-        <link rel="stylesheet" href="<?=css()?>estilos.min.css">
+        <link rel="stylesheet" href="<?=css()?>menu.min.css">
+        <link rel="stylesheet" href="<?=css()?>menu-modificado.min.css">
+        <link rel="stylesheet" href="<?=css()?>estilos.css">
         
         <?php if (isset($estilos)) : foreach ($estilos as $ruta) : ?>
         <link rel="stylesheet" href="<?=$ruta;?>.css">
@@ -39,6 +39,10 @@
         
         <style>
             .loading{position:fixed;background:var(--background-color2);height:100vh;width:100%;z-index:100;display:flex;justify-content:center;align-items:center}.loading-inactivo{-webkit-animation:fadeout 1s ease-in-out;animation:fadeout 1s ease-in-out;pointer-events:none;opacity:0}@keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes fadeout{from{opacity:1}to{opacity:0}}.spinner{width:40px;height:40px;margin:100px auto;background-color:#008959;border-radius:100%;-webkit-animation:sk-scaleout 1.0s infinite ease-in-out;animation:sk-scaleout 1.0s infinite ease-in-out;position:absolute}@-webkit-keyframes sk-scaleout{0%{-webkit-transform:scale(0)}100%{-webkit-transform:scale(1.0);opacity:0}}@keyframes sk-scaleout{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1.0);transform:scale(1.0);opacity:0}}
+
+            .wow:first-child {
+                visibility: hidden;
+            }
         </style>
 
     </head>

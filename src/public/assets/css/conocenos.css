@@ -1,0 +1,348 @@
+.movil {
+    display: none;
+}
+.estilo1 {
+    display: flex;
+    max-height: 200px;
+    overflow: visible;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.box-titulo {
+    position: absolute;
+    top: -80px;
+    /* left: 0; */
+}
+.titulo {
+    border-bottom: solid 4px #53AE42;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.text-right {
+    text-align: right;
+}
+
+.estilo1 .parrafo {
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    background-color: var(--background-color2);
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 0px 10px 10px 0px;
+}
+.estilo1 .parrafo:first-child {
+	border-radius: 10px 0px 0px 10px;
+}
+
+
+.img-banner {
+    background-image: url(../images/conocenos/banner-conocenos.jpg); 
+    background-size: cover;
+    background-position: top;
+    background-color: white;
+}
+.img-banner .columna {
+    max-width: 50%;
+    margin-left: auto;
+    padding: 20px 0px;
+}
+.img-banner-movil {
+    display: none;
+}
+.img-banner h2 {
+    display: inline-block;
+    border-bottom: solid 4px #53AE42;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.nav-secondary {
+    display: flex;
+}
+.nav-secondary .columna {
+    justify-content: center;
+    margin: 0px 1px;
+    position: relative;
+    height: 100%;
+    transition: all 1s;
+}
+.nav-secondary .columna:nth-child(1) {
+    background-color: #80699E;
+    margin-left: 0;
+    margin-top: 0;
+}
+.nav-secondary .columna:nth-child(2) {
+    background-color: #00ACD9;
+}
+.nav-secondary .columna:nth-child(3) {
+    background-color: #53AE42;
+    margin-right: 0;
+}
+.nav-secondary button {
+	background: none;
+	border: 0;
+	border-radius: 0.4rem;
+	padding: 1.1rem;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+    color: white;
+    width: 100%;
+    font-family: "Open Sans Bold";
+}
+.nav-secondary button .arrow {
+    position: absolute;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    /* padding-right: 20px; */
+    margin-right: 20px;
+    transition: all 0.5s;
+}
+.nav-secondary button.active .arrow {
+    transform: rotate(180deg);
+}
+.nav-secondary p {
+    font-size: 16px;
+    color: white;
+    padding: 10px 30px 30px 30px;
+    text-align: center;
+    margin: 0;
+}
+.nav-secondary .columna .item {
+    overflow: hidden;
+}
+.nav-secondary .columna .item button i{
+    pointer-events: none;
+}
+.nav-secondary .parrafo {
+    max-height: 0;
+    transition: max-height 0.4s;
+}
+.nav-secondary .parrafo.active {
+    transition: max-height 0.6s ease-in;
+    max-height: 500px;
+}
+
+.detalles {
+    /* padding-top: 80px; */
+}
+.detalles .box {
+    margin-top: 100px; 
+    margin-bottom:60px
+}
+.detalles .columna {
+    margin-bottom: 170px;
+    display: block;
+}
+
+
+.detalles .box .columna:first-child {
+    padding-right: 50px;
+}
+.detalles .box .columna:nth-child(2) {
+    padding-left: 50px;
+}
+.detalles .box .columna:last-child {
+    padding-right: 50px;
+    margin-bottom: 0px;
+}
+
+.detalles .columna:first-child .box-titulo {
+    left: 0;
+}
+.detalles .columna:last-child .box-titulo {
+    left: 0;
+}
+
+.detalles .swiper-button-next::after, .swiper-button-prev::after {
+	color: white;
+    font-size: 30px;
+}
+
+
+.carousel-inner > .item > img {
+    max-width: max-content;
+}
+.carousel-control.right {
+    background-image: none;
+}
+
+
+
+.estilo1 .imagen {
+    /* width: auto; */
+    max-width: 470px;
+    margin-right: auto;
+}
+.estilo1 .parrafo .titulo {
+   font-size: 20px;
+}
+
+
+
+.hr-first {
+    border: solid #FFB71B;
+}
+
+.cifras h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cifras .box {
+    /* max-width: 900px; */
+    margin: 0 auto;
+    display: flex;
+}
+.cifras .card {
+    margin: 10px;
+    display: flex;
+    border-radius: 8px;
+}
+.cifras .card .parrafo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 0px;
+}
+.cifras .card .parrafo p {
+    margin: 0px;
+}
+
+@media (max-width: 991.98px) {
+
+    .estilo1 .parrafo {
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0px;
+        padding: 0px 20px;
+    }
+    .estilo1 .parrafo .titulo {
+        margin-top: 0px;
+    }
+    .estilo1 {
+        max-height: max-content;
+        padding: 20px;
+        background-color: var(--background-color2);
+        box-shadow: 0 3px 6px #00000029;
+        border-radius: 8px;
+    }
+    .estilo1 img {
+        width: 100%;
+    }
+    .estilo1 > div {
+        width: 50%;
+    }
+    .detalles .columna {
+        margin-bottom: 30px;
+    }
+    .box-titulo {
+        position: static;
+    }
+
+    .detalles .box {
+        margin-top: 60px; 
+        margin-bottom:20px
+    }
+
+
+    .detalles .box .columna:first-child {
+        padding-right: 0px;
+    }
+    .detalles .box .columna:nth-child(2) {
+        padding-left: 0px;
+    }
+    .detalles .box .columna:last-child {
+        padding-right: 0px;
+    }
+    
+
+    .cifras .box {
+        max-width: 80%;
+        display: block;
+    }
+
+    .nav-secondary {
+        display: block;
+    }
+
+    .nav-secondary .columna {
+        margin: 10px 0px;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+
+    .cifras .box {
+        max-width: 100%;
+        display: block;
+    }
+
+    .detalles .box {
+        margin-top: 30px; 
+        margin-bottom:0px
+    }
+
+    .img-banner {
+        background-image: none; 
+    }
+
+    .img-banner .columna {
+        max-width: 100%;
+        margin-left: initial;
+        padding-top: 0px;
+    }
+
+
+    .movil {
+        display: block;
+    }
+
+   
+    
+
+    .estilo1 {
+        display: block;
+    }
+    .estilo1 .parrafo {
+        padding: 0px;
+    }
+
+     .estilo1 > div {
+        width: 100%;
+    }
+
+    .estilo1 .imagen {
+        margin-top: 20px;
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .detalles .columna:first-child .estilo1 {
+        display: block;
+    }
+    .detalles .columna:last-child .estilo1 {
+        display: block;
+    }
+
+    .estilo1 .parrafo .titulo {
+        font-size: 18px;
+    }
+}

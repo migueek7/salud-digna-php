@@ -231,7 +231,7 @@ class Pages extends Controller
             css().'plugins/swiper-bundle.min',
             css().'plugins/alerts',
             css().'form',
-            css().'contacto',
+            css().'conocenos',
             css().'estilos'
         ];
 
@@ -242,8 +242,9 @@ class Pages extends Controller
             ['route' => js().'plugins/sweetalert2.min'],
             ['route' => js().'plugins/swiper-bundle.min'],
             ['route' => js().'plugins/alerts'],
+            ['route' => js().'plugins/wow.min'],
             ['route' => js().'main'],
-            ['route' => js().'contacto', 'module' => true]
+            ['route' => js().'conocenos']
         ];
 
         $SEO = [

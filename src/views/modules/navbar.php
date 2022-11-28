@@ -10,7 +10,7 @@ $navMain = [
                 "titulo" => "¿Quiénes somos?",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page"
+                "ruta" => base_url()."/conocenos"
             ],
             [
                 "titulo" => "Historia",

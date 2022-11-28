@@ -23,16 +23,16 @@ if($method == "OPTIONS") {
 /* -------------------------------------------------------------------------- */
 date_default_timezone_set('America/Mazatlan');
 //DESARROLLO
-ini_set('display_errors', 1);
-ini_set('log_errors', 1);
-ini_set('error_reporting', E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('log_errors', 1);
+// ini_set('error_reporting', E_ALL);
 
 //PRODUCCION
-// error_reporting(E_ALL);
-// ini_set('ignore_repeated_errors', TRUE);
-// ini_set('display_errors', FALSE);
-// ini_set('log_errors', TRUE);
-// ini_set('error_log', 'logs/php-error.log');
+error_reporting(E_ALL);
+ini_set('ignore_repeated_errors', TRUE);
+ini_set('display_errors', FALSE);
+ini_set('log_errors', TRUE);
+ini_set('error_log', 'logs/php-error.log');
 /* -------------------------------------------------------------------------- */
 /*                                  Includes                                  */
 /* -------------------------------------------------------------------------- */
