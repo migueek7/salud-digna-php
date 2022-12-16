@@ -308,7 +308,7 @@ $navMain = [
                 "id" => "Mastografia",
                 "titulo" => "Mastografía",
                 "extracto" => "Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y.",
-                "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
+                "imagen" => images()."menu/servicios/mastografia".$imgExt,
                 "ruta" => base_url()."/blank-page",
                 "submenu" => [
                     "titulo" => "Mastografía",
@@ -324,7 +324,7 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/electrocardiograma-web".$imgExt
+                    "subImagen" => images()."menu/servicios/mastografia-web".$imgExt
                 ]
             ],
             [
@@ -364,7 +364,7 @@ $navMain = [
                 "imagen" => images()."/menu/pacientes/resultados".$imgExt,
                 "ruta" => base_url()."/blank-page",
                 "submenu" => [
-                    "titulos" => "Consulta de resultados",
+                    "titulo" => "Consulta de resultados",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
                     "subImagen" => images()."menu/pacientes/resultados-web".$imgExt
                 ]
@@ -539,7 +539,7 @@ $navMain = [
                                                                 <div class="columna" style="width: 150%;">
                                                                     <div>
                                                                         <div>
-                                                                            <h2>
+                                                                            <h2 class="title">
                                                                                 <?=isset($item['submenu']['titulo']) ? $item['submenu']['titulo'] : null?>
                                                                             </h2>
                                                                             <p>

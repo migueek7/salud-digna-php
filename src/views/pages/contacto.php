@@ -62,7 +62,7 @@
 
             <div id="load" class="d-none">
                <!-- <h4 class="font-size-xl">Buscando<span class="dotting"></span></h4> -->
-               <img src="<?=images()?>buscar-animate.gif" alt="">
+               <img loading="lazy" src="<?=images()?>buscar-animate.gif" alt="">
             </div>
 
             <div id="nofound" class="text-center nofound d-none">
@@ -192,15 +192,15 @@
                 <div class="grid-2 pb-3">
     
                     <div class="columna pb-2">
-                        <img src="<?=images()?>/contacto/consulta1.png" width="367" class="imagen" alt="">
+                        <img loading="lazy" src="<?=images()?>/contacto/consulta1.png" width="367" class="imagen" alt="">
                     </div>
     
                     <div class="columna pb-2">
-                        <img src="<?=images()?>/contacto/consulta2.png" width="375" class="imagen" alt="">
+                        <img loading="lazy" src="<?=images()?>/contacto/consulta2.png" width="375" class="imagen" alt="">
                     </div>
     
                     <div class="columna pb-2">
-                        <img src="<?=images()?>/contacto/consulta3.png" width="378" class="imagen" alt="">
+                        <img loading="lazy" src="<?=images()?>/contacto/consulta3.png" width="378" class="imagen" alt="">
                     </div>
                 </div>
             </div>

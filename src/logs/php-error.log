@@ -1,0 +1,6 @@
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP Warning:  session_start(): Cannot start session when headers already sent in /var/www/html/App/Controllers/Pages.php on line 11
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP Stack trace:
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP   1. {main}() /var/www/html/index.php:0
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP   2. callController($match = ['target' => 'Pages#home', 'params' => [], 'name' => NULL]) /var/www/html/index.php:90
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP   3. App\Controllers\Pages->__construct() /var/www/html/index.php:114
+[02-Dec-2022 09:41:29 America/Mazatlan] PHP   4. session_start() /var/www/html/App/Controllers/Pages.php:11

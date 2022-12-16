@@ -43,6 +43,10 @@
     background-position: top;
     background-color: white;
 }
+.img-banner > .contenedor {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 .img-banner .columna {
     max-width: 50%;
     margin-left: auto;
