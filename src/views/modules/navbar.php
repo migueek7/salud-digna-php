@@ -1,51 +1,51 @@
 <?php
-$imgExt = ".webp"; 
+$imgExt = ".webp";
 $navMain = [
     [
-        "id" => "Conocenos", 
+        "id" => "Conocenos",
         "titulo" => "Conócenos",
         "megamenu" => false,
         "items" => [
             [
                 "titulo" => "¿Quiénes somos?",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/conocenos"
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/conocenos"
             ],
             [
                 "titulo" => "Historia",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page"
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page"
             ],
             [
                 "titulo" => "Centro Nacional de Referencia",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page"
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page"
             ],
             [
                 "titulo" => "Misión, visión y valores",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page"
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page"
             ],
             [
                 "titulo" => "Bolsa de Trabajo",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page"
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page"
             ],
             [
                 "titulo" => "Contáctanos",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
                 "ruta" => "contactanos"
             ]
         ],
     ],
     [
-        "id" => "Servicios", 
+        "id" => "Servicios",
         "titulo" => "Servicios",
         "megamenu" => true,
         "items" => [
@@ -55,8 +55,8 @@ $navMain = [
                 "extracto" => "
                     Contamos con más de 1000 pruebas, de las cuales, la mayoría se procesan en cada uno de nuestros laboratorios.
                 ",
-                "imagen" => images()."/menu/servicios/laboratorio".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/servicios/laboratorio" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Laboratorio",
                     "extracto" => "
@@ -71,15 +71,15 @@ $navMain = [
                          Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/laboratorio-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/laboratorio-web" . $imgExt
                 ]
             ],
             [
                 "id" => "CovidPCR",
                 "titulo" => "COVID PCR",
                 "extracto" => "Se realiza en pacientes con síntomas o sospechas de contagio, Se realiza por técnica PCR.",
-                "imagen" => images()."/menu/servicios/pcr".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/servicios/pcr" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "COVID PCR",
                     "extracto" => "
@@ -94,15 +94,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/pcr-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/pcr-web" . $imgExt
                 ]
             ],
             [
                 "id" => "CovidAntigeno",
                 "titulo" => "COVID Antígeno",
                 "extracto" => "Se realiza en pacientes que buscan confirmar si sus síntomas son sinónimo de contagio.",
-                "imagen" => images()."/menu/servicios/antigenos".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/servicios/antigenos" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "COVID Antígeno",
                     "extracto" => "
@@ -117,15 +117,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/antigenos-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/antigenos-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Ultrasonido",
                 "titulo" => "Ultrasonido",
                 "extracto" => "Utilizando un dispositivo llamado sonda se envían ondas de sonido que son recogidas por ella misma.",
-                "imagen" => images()."menu/servicios/ultrasonido".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/ultrasonido" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Ultrasonido",
                     "extracto" => "
@@ -143,15 +143,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/ultrasonido-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/ultrasonido-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Lentes",
                 "titulo" => "Lentes",
                 "extracto" => "Los errores de refracción son la condición más común en la visión de las personas.",
-                "imagen" => images()."menu/servicios/lentes".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/lentes" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Lentes",
                     "extracto" => "
@@ -163,15 +163,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/lentes-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/lentes-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Electrocardiograma",
                 "titulo" => "Electrocardiograma",
                 "extracto" => "El electrocardiograma es un proceso seguro, sin representar riesgo para el paciente.",
-                "imagen" => images()."menu/servicios/electrocardiograma".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/electrocardiograma" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Electrocardiograma",
                     "extracto" => "
@@ -179,15 +179,15 @@ $navMain = [
                         El electrocardiograma es un proceso seguro, sin representar riesgo para el paciente. Para más información comunícate con nosotros a través del chat.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/electrocardiograma-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/electrocardiograma-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Tomografia",
                 "titulo" => "Tomografía",
                 "extracto" => "La tomografía computarizada es un procedimiento para diagnóstico con imágenes, el cual es indoloro.",
-                "imagen" => images()."menu/servicios/tomografia".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/tomografia" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Tomografía",
                     "extracto" => "
@@ -205,15 +205,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/tomografia-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/tomografia-web" . $imgExt
                 ]
             ],
             [
                 "id" => "RayosX",
                 "titulo" => "Rayos X",
                 "extracto" => "Contamos con equipos de rayos x de alta resolución, con el objeto de auxiliar a los médicos en la integración.",
-                "imagen" => images()."menu/servicios/rayos-x".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/rayos-x" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Rayos X",
                     "extracto" => "
@@ -232,15 +232,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/rayos-x-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/rayos-x-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Desintrometria",
                 "titulo" => "Densitometría",
                 "extracto" => "Se trata de una prueba común, rápida, sencilla e indolora, por lo que puede ser realizado sin comprometer la.",
-                "imagen" => images()."menu/servicios/densitometria".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/densitometria" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Densitometría",
                     "extracto" => "
@@ -252,15 +252,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/densitometria-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/densitometria-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Resonancia",
                 "titulo" => "Resonancia Magnética",
                 "extracto" => "Es un procedimiento no invasivo e indoloro que se realiza en Salud Digna. Algunos estudios con los que.",
-                "imagen" => images()."menu/servicios/resonancia".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/resonancia" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Resonancia Magnética",
                     "extracto" => "
@@ -278,15 +278,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/resonancia-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/resonancia-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Papanicolaou",
                 "titulo" => "Papanicolaou",
                 "extracto" => "Como medida para la pronta detección de infecciones por el virus del papiloma humano (VPH) que es la principal.",
-                "imagen" => images()."menu/servicios/papanicolaou".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/papanicolaou" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Papanicolaou",
                     "extracto" => "
@@ -301,15 +301,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/papanicolaou-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/papanicolaou-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Mastografia",
                 "titulo" => "Mastografía",
                 "extracto" => "Los estudios de gabinete, utilizados para la detección y control de los padecimientos mamarios, tienen indicaciones y.",
-                "imagen" => images()."menu/servicios/mastografia".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/mastografia" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Mastografía",
                     "extracto" => "
@@ -324,15 +324,15 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/mastografia-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/mastografia-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Nutricion",
                 "titulo" => "Nutrición",
                 "extracto" => "Los excesos pueden traer riesgos a nuestro estilo de vida y con ello, caer en enfermedades cardiovasculares.",
-                "imagen" => images()."menu/servicios/nutricion".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "menu/servicios/nutricion" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Nutrición",
                     "extracto" => "
@@ -347,13 +347,13 @@ $navMain = [
                             Consulte a su médico ya que es el único facultado para indicar el tipo de estudio a realizar en cada paciente de acuerdo a su historia clínica e interpretar los resultados.
                         </p>
                     ",
-                    "subImagen" => images()."menu/servicios/nutricion-web".$imgExt
+                    "subImagen" => images() . "menu/servicios/nutricion-web" . $imgExt
                 ]
             ],
         ]
     ],
     [
-        "id" => "Pacientes", 
+        "id" => "Pacientes",
         "titulo" => "Pacientes",
         "megamenu" => true,
         "items" => [
@@ -361,92 +361,92 @@ $navMain = [
                 "id" => "Resultados",
                 "titulo" => "Consulta de resultados",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Consulta de resultados",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                    "subImagen" => images()."menu/pacientes/resultados-web".$imgExt
+                    "subImagen" => images() . "menu/pacientes/resultados-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Citas",
                 "titulo" => "Haz una cita",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/citas".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/citas" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Haz una cita",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                    "subImagen" => images()."menu/pacientes/citas-web".$imgExt
+                    "subImagen" => images() . "menu/pacientes/citas-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Preparaciones",
                 "titulo" => "Precios y preparaciones",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/preparaciones".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/preparaciones" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Precios y preparaciones",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                    "subImagen" => images()."menu/pacientes/preparaciones-web".$imgExt
+                    "subImagen" => images() . "menu/pacientes/preparaciones-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Devoluciones",
                 "titulo" => "Cambios en mi cita y devoluciones",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/citas".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/citas" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "Cambios en mi cita y devoluciones",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                    "subImagen" => images()."menu/pacientes/citas-web".$imgExt
+                    "subImagen" => images() . "menu/pacientes/citas-web" . $imgExt
                 ]
             ],
             [
                 "id" => "Facturas",
                 "titulo" => "¿Necesitas Factura?",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/factura".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/factura" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
                 "submenu" => [
                     "titulo" => "¿Necesitas Factura?",
                     "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                    "subImagen" => images()."menu/pacientes/factura-web".$imgExt
+                    "subImagen" => images() . "menu/pacientes/factura-web" . $imgExt
                 ]
             ]
         ]
     ],
     [
-        "id" => "Atencion", 
+        "id" => "Atencion",
         "titulo" => "Atención a empresas",
         "megamenu" => false,
         "items" => [
             [
                 "titulo" => "Ver paquetes",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
             ],
             [
                 "titulo" => "Check ups",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
             ],
             [
                 "titulo" => "Perfiles de admisión",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
             ],
             [
                 "titulo" => "Contactar con un agente",
                 "extracto" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, deserunt doloribus.",
-                "imagen" => images()."/menu/pacientes/resultados".$imgExt,
-                "ruta" => base_url()."/blank-page",
+                "imagen" => images() . "/menu/pacientes/resultados" . $imgExt,
+                "ruta" => base_url() . "/blank-page",
             ]
         ]
     ]
@@ -460,8 +460,8 @@ $navMain = [
         <div class="menu__container contenedor py-0">
 
             <h1 class="menu__logo">
-                <a href="<?=$_ENV['BASE_URL']?>" class="load">
-                    <img src="<?=images()?>/logo.svg" alt="Salud Digna">
+                <a href="<?= $_ENV['BASE_URL'] ?>" class="load">
+                    <img src="<?= images() ?>/logo.svg" alt="Salud Digna">
                 </a>
             </h1>
 
@@ -470,118 +470,111 @@ $navMain = [
 
 
                     <?php
-                        foreach ($navMain as $key => $navLink) :
+                    foreach ($navMain as $key => $navLink) :
                     ?>
-                            <li class="menu__item <?=$navLink["megamenu"] ? 'mega megamenu' : 'menu__item-show'?>" style="position: inherit">
+                        <li class="menu__item <?= $navLink["megamenu"] ? 'mega megamenu' : 'menu__item-show' ?>" style="position: inherit">
 
-                                <!-- NAVLINK -->
-                                <button class="menu__link" id="menu<?=$navLink["id"]?>">
-                                    <?=$navLink["titulo"]?> 
-                                    <img loading="lazy" src="<?=images()?>iconos/arrow-down.svg" class="menu__arrow" alt="">    
-                                </button>
+                            <!-- NAVLINK -->
+                            <button class="menu__link" id="menu<?= $navLink["id"] ?>">
+                                <?= $navLink["titulo"] ?>
+                                <img loading="lazy" src="<?= images() ?>iconos/arrow-down.svg" class="menu__arrow" alt="">
+                            </button>
 
-                                <!-- MEGAMENU -->
-                                <div class="menu__sombra ">
-                                    <div class="menu__nesting"> 
+                            <!-- MEGAMENU -->
+                            <div class="menu__sombra ">
+                                <div class="menu__nesting">
 
-                                        <div>
-                                            <div class="<?=$navLink["megamenu"] ? 'scroll' : null?>">
-                                                <ul class="p-0">
-                                                    <?php
-                                                        foreach ($navLink["items"] as $key => $item) :
-                                                    ?>
-                                                        <li class="menu__inside">
-                                                            <a href="<?=$item['ruta']?>" 
-                                                            class="menu__link menu__link-inside" 
-                                                            id="<?=isset($item['id']) ? $item['id'] : null?>">
+                                    <div>
+                                        <div class="<?= $navLink["megamenu"] ? 'scroll' : null ?>">
+                                            <ul class="p-0">
+                                                <?php
+                                                foreach ($navLink["items"] as $key => $item) :
+                                                ?>
+                                                    <li class="menu__inside">
+                                                        <a href="<?= $item['ruta'] ?>" class="menu__link menu__link-inside load" id="<?= isset($item['id']) ? $item['id'] : null ?>">
 
-                                                                <div class="desktop">
-                                                                    <?=$item['titulo']?>
-                                                                </div>
+                                                            <div class="desktop">
+                                                                <?= $item['titulo'] ?>
+                                                            </div>
 
-                                                                <div class="movil">
-                                                                    <div class="boxnav">
-                                                                        <div class="text">
-                                                                            <strong><?=$item['titulo']?></strong>
-                                                                            <p><?=$item['extracto']?></p>
-                                                                        </div>
-                                                                        <img src="<?=$item['imagen']?>" alt="">
+                                                            <div class="movil">
+                                                                <div class="boxnav">
+                                                                    <div class="text">
+                                                                        <strong><?= $item['titulo'] ?></strong>
+                                                                        <p><?= $item['extracto'] ?></p>
                                                                     </div>
-                                                                </div>          
-                                                                
-                                                                
-                                                            </a>
-                                                        </li>
-                                                    <?php
-                                                        endforeach
-                                                    ?>
-                                                </ul>
-
-                                                <div class="botonScroll" style="display: none;">
-                                                    <div>
-                                                        <button class="btnDownMega">
-                                                            <i class="icon-arrow-down"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                               
-                                            </div>
-                                            
-    
-                                            <!-- SUBMENU -->
-                                            <div class="submenu">
-                                                <div class="content">
-                                                    <?php
-                                                        foreach ($navLink["items"] as $key => $item) :
-                                                    ?>     
-                                                        <div class="d-none" name="<?=isset($item['id']) ? $item['id'] : null?>">
-                                                            <div class="box">
-                                                                <div class="columna" style="width: 150%;">
-                                                                    <div>
-                                                                        <div>
-                                                                            <h2 class="title">
-                                                                                <?=isset($item['submenu']['titulo']) ? $item['submenu']['titulo'] : null?>
-                                                                            </h2>
-                                                                            <p>
-                                                                                <?=isset($item['submenu']['extracto']) ? $item['submenu']['extracto'] : null?>
-                                                                            </p>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                
-                                                                <div class="columna">
-                                                                    <img src="<?=isset($item['submenu']['subImagen']) ? $item['submenu']['subImagen'] : null?>" 
-                                                                    class="img-fluid banner" alt="Prueba PCR">
+                                                                    <img src="<?= $item['imagen'] ?>" alt="">
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    <?php
-                                                        endforeach
-                                                    ?>
+
+
+                                                        </a>
+                                                    </li>
+                                                <?php
+                                                endforeach
+                                                ?>
+                                            </ul>
+
+                                            <div class="botonScroll" style="display: none;">
+                                                <div>
+                                                    <button class="btnDownMega">
+                                                        <i class="icon-arrow-down"></i>
+                                                    </button>
                                                 </div>
                                             </div>
+
                                         </div>
 
-                                       
 
+                                        <!-- SUBMENU -->
+                                        <div class="submenu">
+                                            <div class="content">
+                                                <?php
+                                                foreach ($navLink["items"] as $key => $item) :
+                                                ?>
+                                                    <div class="d-none" name="<?= isset($item['id']) ? $item['id'] : null ?>">
+                                                        <div class="box">
+                                                            <div class="columna" style="width: 150%;">
+                                                                <div>
+                                                                    <div>
+                                                                        <h2 class="title">
+                                                                            <?= isset($item['submenu']['titulo']) ? $item['submenu']['titulo'] : null ?>
+                                                                        </h2>
+                                                                        <p>
+                                                                            <?= isset($item['submenu']['extracto']) ? $item['submenu']['extracto'] : null ?>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="columna">
+                                                                <img src="<?= isset($item['submenu']['subImagen']) ? $item['submenu']['subImagen'] : null ?>" class="img-fluid banner" alt="Prueba PCR">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <?php
+                                                endforeach
+                                                ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
 
-                            </li>
+
+
+                                </div>
+                            </div>
+
+                        </li>
                     <?php
-                        endforeach;
+                    endforeach;
                     ?>
 
-
-                    
-                     <li class="menu__item">
-                        <a href="<?=base_url()?>/blank-page" class="menu__link">
+                    <li class="menu__item">
+                        <a href="<?= base_url() ?>/blank-page" class="menu__link load">
                             Ubica tu clínica
                         </a>
                     </li>
-        
 
-                  
                     <!-- <li class="menu__item menu__item-show">
                         <button class="menu__link main">
                             Conócenos <img src="<images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
@@ -611,7 +604,7 @@ $navMain = [
                         </div>
                     </li> -->
 
-        
+
                     <!-- <li class="menu__item menu__item-show">
                         <button href="javascript:void(0)" class="menu__link main">
                             Atención a empresas <img src="<images()?>/iconos/arrow-down.svg" class="menu__arrow" alt="">
@@ -634,7 +627,7 @@ $navMain = [
                             </ul>
                         </div>
                     </li> -->
-                    
+
 
                     <!-- <li class="menu__item">
                         <a href="<base_url()?>/blank-page" class="menu__link">
@@ -645,16 +638,16 @@ $navMain = [
 
                 </ul>
 
-                
+
                 <footer>
                     <div class="grid-2">
                         <div class="columna">
-                            <a href="<?=base_url()?>/iniciar-sesion" class="btn btn-one mx-auto">
+                            <a href="<?= base_url() ?>/iniciar-sesion" class="btn btn-one mx-auto load">
                                 Iniciar sesión <span class="loader loader__btn"></span>
                             </a>
                         </div>
                         <div class="columna">
-                            <a href="<?=base_url()?>/registro" class="btn btn-one-outline mx-auto">
+                            <a href="<?= base_url() ?>/registro" class="btn btn-one-outline mx-auto load">
                                 Registrar
                             </a>
                         </div>
@@ -667,23 +660,23 @@ $navMain = [
 
             <div class="menu__accion" style="display: flex;">
 
-                    <button class="hamburger hamburger--collapse" type="button" aria-label="Abrir menú" readonly="true">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-        
-        
-                    <!-- <div style="display:flex; align-items: center;font-size: 2rem;margin-left: 1.2rem;">
+                <button class="hamburger hamburger--collapse" type="button" aria-label="Abrir menú" readonly="true">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+
+
+                <!-- <div style="display:flex; align-items: center;font-size: 2rem;margin-left: 1.2rem;">
                         <button id="btn-buscar">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <img src="<images()?>/iconos/search.svg" alt="icono buscar" style="width: 35px;height: 35px;">
                         </button>
                     </div> -->
-                </div>
+            </div>
 
 
-            
+
 
         </div>
 
@@ -693,7 +686,7 @@ $navMain = [
     <div id="buscador">
         <div class="buscador__caja ">
             <div class="contenedor">
-                
+
                 <form id="form-buscador" class="pb-0">
                     <input class="w-100 buscador__input" type="text" name="buscar" placeholder="¿Qué deseas buscar?">
                 </form>
@@ -705,7 +698,7 @@ $navMain = [
                                 <i class="fa-solid fa-magnifying-glass"></i> HTML
                             </a>
                         </li>
-                            
+
                         <li>
                             <a href="#">
                                 <i class="fa-solid fa-magnifying-glass"></i> CSS

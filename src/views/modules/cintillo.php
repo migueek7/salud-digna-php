@@ -10,7 +10,6 @@
             </div> -->
             <div class="cintillo__enlaces">
                 <?php if (empty($_SESSION['login'])) { ?>
-
                     
                     <a href="<?=$_ENV['BASE_URL']?>/iniciar-sesion" class="load">
                         <i class="icon-user icon-lg pr-1 pr-md-0"></i> 

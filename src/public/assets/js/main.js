@@ -1,5 +1,17 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
+    const Load = document.querySelectorAll('.load');
+    console.log(Load);
+
+    Load.forEach(element => {
+        element.addEventListener('click', () => {
+            console.log("Load en accion");
+            document.getElementById('loading').classList.remove("loading-inactivo");
+        })
+
+    });
+
+
     if (document.querySelector(".mySwiper")) {
         var swiper1 = new Swiper(".mySwiper", {
             spaceBetween: 30,
